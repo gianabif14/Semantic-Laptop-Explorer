@@ -12,8 +12,7 @@ Aplikasi desktop dan web terintegrasi berbasis Java (Maven) dan Web Semantik unt
 
 ## Antarmuka Pengguna (Semantic Laptop Explorer)
 
-![Tampilan Antarmuka Semantic Laptop Explorer](docs/screenshot.png)
-*(Catatan: Sesuaikan path gambar di atas dengan lokasi penyimpanan tangkapan layar pada repositori Anda)*
+![Tampilan Antarmuka Semantic Laptop Explorer](tampilan.png)
 
 Aplikasi ini menghadirkan antarmuka **Semantic Laptop Explorer** yang terhubung langsung dengan basis pengetahuan ontologi `ontology/ontologi_laptop.ttl` (memuat **101 total koleksi** perangkat laptop & desktop berbasis RDF/OWL, SPARQL, dan SKOS)[cite: 2].
 
