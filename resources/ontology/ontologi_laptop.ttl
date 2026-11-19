@@ -1,0 +1,2071 @@
+@prefix : <http://example.org/laptop-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://example.org/laptop-ontology#> .
+
+<http://example.org/laptop-ontology> rdf:type owl:Ontology ;
+                                      rdfs:label "Ontologi Spesifikasi Laptop"@id .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/laptop-ontology#diproduksiOleh
+:diproduksiOleh rdf:type owl:ObjectProperty ;
+                owl:inverseOf :memproduksi ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:domain :Laptop ;
+                rdfs:range :Brand .
+
+
+###  http://example.org/laptop-ontology#displayDari
+:displayDari rdf:type owl:ObjectProperty ;
+             owl:inverseOf :memilikiDisplay ;
+             rdfs:domain :Display ;
+             rdfs:range :Laptop .
+
+
+###  http://example.org/laptop-ontology#gpuDari
+:gpuDari rdf:type owl:ObjectProperty ;
+         owl:inverseOf :memilikiGPU ;
+         rdfs:domain :GraphicsCard ;
+         rdfs:range :Laptop .
+
+
+###  http://example.org/laptop-ontology#kompatibelDengan
+:kompatibelDengan rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Laptop ;
+                  rdfs:range :OperatingSystem .
+
+
+###  http://example.org/laptop-ontology#memilikiDisplay
+:memilikiDisplay rdf:type owl:ObjectProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :Laptop ;
+                 rdfs:range :Display .
+
+
+###  http://example.org/laptop-ontology#memilikiGPU
+:memilikiGPU rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Laptop ;
+             rdfs:range :GraphicsCard .
+
+
+###  http://example.org/laptop-ontology#memilikiOperatingSystem
+:memilikiOperatingSystem rdf:type owl:ObjectProperty ;
+                         owl:inverseOf :operatingSystemDari ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:domain :Laptop ;
+                         rdfs:range :OperatingSystem .
+
+
+###  http://example.org/laptop-ontology#memilikiPriceRange
+:memilikiPriceRange rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain :Laptop ;
+                    rdfs:range :PriceRange .
+
+
+###  http://example.org/laptop-ontology#memilikiProcessor
+:memilikiProcessor rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :processorDari ;
+                   rdf:type owl:FunctionalProperty ;
+                   rdfs:domain :Laptop ;
+                   rdfs:range :Processor .
+
+
+###  http://example.org/laptop-ontology#memilikiRAM
+:memilikiRAM rdf:type owl:ObjectProperty ;
+             owl:inverseOf :ramDari ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain :Laptop ;
+             rdfs:range :RAM .
+
+
+###  http://example.org/laptop-ontology#memilikiStorage
+:memilikiStorage rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :storageDari ;
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:domain :Laptop ;
+                 rdfs:range :Storage .
+
+
+###  http://example.org/laptop-ontology#memproduksi
+:memproduksi rdf:type owl:ObjectProperty ;
+             rdfs:domain :Brand ;
+             rdfs:range :Laptop .
+
+
+###  http://example.org/laptop-ontology#operatingSystemDari
+:operatingSystemDari rdf:type owl:ObjectProperty ;
+                     rdfs:domain :OperatingSystem ;
+                     rdfs:range :Laptop .
+
+
+###  http://example.org/laptop-ontology#penerusDari
+:penerusDari rdf:type owl:ObjectProperty ,
+                      owl:TransitiveProperty ;
+             rdfs:domain :Processor ;
+             rdfs:range :Processor .
+
+
+###  http://example.org/laptop-ontology#processorDari
+:processorDari rdf:type owl:ObjectProperty ;
+               rdfs:domain :Processor ;
+               rdfs:range :Laptop .
+
+
+###  http://example.org/laptop-ontology#ramDari
+:ramDari rdf:type owl:ObjectProperty ;
+         rdfs:domain :RAM ;
+         rdfs:range :Laptop .
+
+
+###  http://example.org/laptop-ontology#storageDari
+:storageDari rdf:type owl:ObjectProperty ;
+             rdfs:domain :Storage ;
+             rdfs:range :Laptop .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/laptop-ontology#adalahDedicated
+:adalahDedicated rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :GraphicsCard ;
+                 rdfs:range xsd:boolean .
+
+
+###  http://example.org/laptop-ontology#adalahTouchscreen
+:adalahTouchscreen rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Laptop ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://example.org/laptop-ontology#arsitektur
+:arsitektur rdf:type owl:DatatypeProperty ;
+            rdfs:domain :OperatingSystem ;
+            rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#beratKg
+:beratKg rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Laptop ;
+         rdfs:range xsd:float .
+
+
+###  http://example.org/laptop-ontology#clockBoostGHz
+:clockBoostGHz rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Processor ;
+               rdfs:range xsd:float .
+
+
+###  http://example.org/laptop-ontology#clockDasarGHz
+:clockDasarGHz rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Processor ;
+               rdfs:range xsd:float .
+
+
+###  http://example.org/laptop-ontology#clockGPU_MHz
+:clockGPU_MHz rdf:type owl:DatatypeProperty ;
+              rdfs:domain :GraphicsCard ;
+              rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#dapatDiUpgrade
+:dapatDiUpgrade rdf:type owl:DatatypeProperty ;
+                rdfs:domain :RAM ;
+                rdfs:range xsd:boolean .
+
+
+###  http://example.org/laptop-ontology#harga
+:harga rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Laptop ;
+       rdfs:range xsd:float .
+
+
+###  http://example.org/laptop-ontology#hargaMaksimum
+:hargaMaksimum rdf:type owl:DatatypeProperty ;
+               rdfs:domain :PriceRange ;
+               rdfs:range xsd:float .
+
+
+###  http://example.org/laptop-ontology#hargaMinimum
+:hargaMinimum rdf:type owl:DatatypeProperty ;
+              rdfs:domain :PriceRange ;
+              rdfs:range xsd:float .
+
+
+###  http://example.org/laptop-ontology#jenisInterface
+:jenisInterface rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Storage ;
+                rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#jenisPanel
+:jenisPanel rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Display ;
+            rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#jenisRAM
+:jenisRAM rdf:type owl:DatatypeProperty ;
+          rdfs:domain :RAM ;
+          rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#jenisStorage
+:jenisStorage rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Storage ;
+              rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#jumlahCore
+:jumlahCore rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Processor ;
+            rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#jumlahCudaCore
+:jumlahCudaCore rdf:type owl:DatatypeProperty ;
+                rdfs:domain :GraphicsCard ;
+                rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#jumlahThread
+:jumlahThread rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Processor ;
+              rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#kapasitasBateraiWh
+:kapasitasBateraiWh rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Laptop ;
+                    rdfs:range xsd:float .
+
+
+###  http://example.org/laptop-ontology#kapasitasGB
+:kapasitasGB rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Memory ;
+             rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#kapasitasStorageGB
+:kapasitasStorageGB rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Storage ;
+                    rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#kecepatanBacaMBps
+:kecepatanBacaMBps rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Storage ;
+                   rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#kecepatanMHz
+:kecepatanMHz rdf:type owl:DatatypeProperty ;
+              rdfs:domain :RAM ;
+              rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#kecepatanTulisMBps
+:kecepatanTulisMBps rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Storage ;
+                    rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#kecerahanNits
+:kecerahanNits rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Display ;
+               rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#lebarResolusi
+:lebarResolusi rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Display ;
+               rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#namaBrand
+:namaBrand rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Brand ;
+           rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#namaGPU
+:namaGPU rdf:type owl:DatatypeProperty ;
+         rdfs:domain :GraphicsCard ;
+         rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#namaModel
+:namaModel rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Laptop ;
+           rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#namaOS
+:namaOS rdf:type owl:DatatypeProperty ;
+        rdfs:domain :OperatingSystem ;
+        rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#namaProcessor
+:namaProcessor rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Processor ;
+               rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#namaRange
+:namaRange rdf:type owl:DatatypeProperty ;
+           rdfs:domain :PriceRange ;
+           rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#namaResolusi
+:namaResolusi rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Display ;
+              rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#negaraAsal
+:negaraAsal rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Brand ;
+            rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#nodeProsesNm
+:nodeProsesNm rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Processor ;
+              rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#nomorModel
+:nomorModel rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Laptop ;
+            rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#refreshRateHz
+:refreshRateHz rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Display ;
+               rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#situsWeb
+:situsWeb rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Brand ;
+          rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#tahunRilis
+:tahunRilis rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Laptop ;
+            rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#tdpWatts
+:tdpWatts rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Processor ;
+          rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#tinggiResolusi
+:tinggiResolusi rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Display ;
+                rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#ukuranLayarInch
+:ukuranLayarInch rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Display ;
+                 rdfs:range xsd:float .
+
+
+###  http://example.org/laptop-ontology#versi
+:versi rdf:type owl:DatatypeProperty ;
+       rdfs:domain :OperatingSystem ;
+       rdfs:range xsd:string .
+
+
+###  http://example.org/laptop-ontology#vramGB
+:vramGB rdf:type owl:DatatypeProperty ;
+        rdfs:domain :GraphicsCard ;
+        rdfs:range xsd:integer .
+
+
+###  http://example.org/laptop-ontology#warna
+:warna rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Laptop ;
+       rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/laptop-ontology#AMDGPU
+:AMDGPU rdf:type owl:Class ;
+        rdfs:subClassOf :DedicatedGPU .
+
+
+###  http://example.org/laptop-ontology#AMDIntegratedGraphics
+:AMDIntegratedGraphics rdf:type owl:Class ;
+                       rdfs:subClassOf :IntegratedGPU .
+
+
+###  http://example.org/laptop-ontology#AMDProcessor
+:AMDProcessor rdf:type owl:Class ;
+              rdfs:subClassOf :Processor .
+
+
+###  http://example.org/laptop-ontology#ASUS
+:ASUS rdf:type owl:Class ;
+      rdfs:subClassOf :Brand .
+
+
+###  http://example.org/laptop-ontology#Acer
+:Acer rdf:type owl:Class ;
+      rdfs:subClassOf :Brand .
+
+
+###  http://example.org/laptop-ontology#Apple
+:Apple rdf:type owl:Class ;
+       rdfs:subClassOf :Brand .
+
+
+###  http://example.org/laptop-ontology#AppleIntegratedGraphics
+:AppleIntegratedGraphics rdf:type owl:Class ;
+                         rdfs:subClassOf :IntegratedGPU .
+
+
+###  http://example.org/laptop-ontology#AppleSilicon
+:AppleSilicon rdf:type owl:Class ;
+              rdfs:subClassOf :Processor .
+
+
+###  http://example.org/laptop-ontology#Brand
+:Brand rdf:type owl:Class .
+
+
+###  http://example.org/laptop-ontology#BudgetLaptop
+:BudgetLaptop rdf:type owl:Class ;
+              rdfs:subClassOf :PriceRange .
+
+
+###  http://example.org/laptop-ontology#BusinessLaptop
+:BusinessLaptop rdf:type owl:Class ;
+                rdfs:subClassOf :Laptop .
+
+
+###  http://example.org/laptop-ontology#ChromeOS
+:ChromeOS rdf:type owl:Class ;
+          rdfs:subClassOf :OperatingSystem .
+
+
+###  http://example.org/laptop-ontology#Component
+:Component rdf:type owl:Class .
+
+
+###  http://example.org/laptop-ontology#DDR4RAM
+:DDR4RAM rdf:type owl:Class ;
+         rdfs:subClassOf :RAM .
+
+
+###  http://example.org/laptop-ontology#DDR5RAM
+:DDR5RAM rdf:type owl:Class ;
+         rdfs:subClassOf :RAM .
+
+
+###  http://example.org/laptop-ontology#Debian
+:Debian rdf:type owl:Class ;
+        rdfs:subClassOf :Linux .
+
+
+###  http://example.org/laptop-ontology#DedicatedGPU
+:DedicatedGPU rdf:type owl:Class ;
+              rdfs:subClassOf :GraphicsCard .
+
+
+###  http://example.org/laptop-ontology#Dell
+:Dell rdf:type owl:Class ;
+      rdfs:subClassOf :Brand .
+
+
+###  http://example.org/laptop-ontology#Display
+:Display rdf:type owl:Class ;
+         rdfs:subClassOf :Component .
+
+
+###  http://example.org/laptop-ontology#Fedora
+:Fedora rdf:type owl:Class ;
+        rdfs:subClassOf :Linux .
+
+
+###  http://example.org/laptop-ontology#FullHDDisplay
+:FullHDDisplay rdf:type owl:Class ;
+               rdfs:subClassOf :Display .
+
+
+###  http://example.org/laptop-ontology#GamingLaptop
+:GamingLaptop rdf:type owl:Class ;
+              rdfs:subClassOf :Laptop .
+
+
+###  http://example.org/laptop-ontology#GeForceGTX
+:GeForceGTX rdf:type owl:Class ;
+            rdfs:subClassOf :NVIDIA .
+
+
+###  http://example.org/laptop-ontology#GeForceRTX
+:GeForceRTX rdf:type owl:Class ;
+            rdfs:subClassOf :NVIDIA .
+
+
+###  http://example.org/laptop-ontology#GraphicsCard
+:GraphicsCard rdf:type owl:Class ;
+              rdfs:subClassOf :Component .
+
+
+###  http://example.org/laptop-ontology#HDD
+:HDD rdf:type owl:Class ;
+     rdfs:subClassOf :Storage .
+
+
+###  http://example.org/laptop-ontology#HDDisplay
+:HDDisplay rdf:type owl:Class ;
+           rdfs:subClassOf :Display .
+
+
+###  http://example.org/laptop-ontology#HP
+:HP rdf:type owl:Class ;
+    rdfs:subClassOf :Brand .
+
+
+###  http://example.org/laptop-ontology#HighEndLaptop
+:HighEndLaptop rdf:type owl:Class ;
+               rdfs:subClassOf :PriceRange .
+
+
+###  http://example.org/laptop-ontology#IPSDisplay
+:IPSDisplay rdf:type owl:Class ;
+            rdfs:subClassOf :Display .
+
+
+###  http://example.org/laptop-ontology#IntegratedGPU
+:IntegratedGPU rdf:type owl:Class ;
+               rdfs:subClassOf :GraphicsCard .
+
+
+###  http://example.org/laptop-ontology#IntelCore
+:IntelCore rdf:type owl:Class ;
+           rdfs:subClassOf :IntelProcessor .
+
+
+###  http://example.org/laptop-ontology#IntelCoreUltra
+:IntelCoreUltra rdf:type owl:Class ;
+                rdfs:subClassOf :IntelProcessor .
+
+
+###  http://example.org/laptop-ontology#IntelGraphics
+:IntelGraphics rdf:type owl:Class ;
+               rdfs:subClassOf :IntegratedGPU .
+
+
+###  http://example.org/laptop-ontology#IntelProcessor
+:IntelProcessor rdf:type owl:Class ;
+                rdfs:subClassOf :Processor .
+
+
+###  http://example.org/laptop-ontology#IntelXeon
+:IntelXeon rdf:type owl:Class ;
+           rdfs:subClassOf :IntelProcessor .
+
+
+###  http://example.org/laptop-ontology#LPDDR5RAM
+:LPDDR5RAM rdf:type owl:Class ;
+           rdfs:subClassOf :RAM .
+
+
+###  http://example.org/laptop-ontology#Laptop
+:Laptop rdf:type owl:Class .
+
+
+###  http://example.org/laptop-ontology#Lenovo
+:Lenovo rdf:type owl:Class ;
+        rdfs:subClassOf :Brand .
+
+
+###  http://example.org/laptop-ontology#Linux
+:Linux rdf:type owl:Class ;
+       rdfs:subClassOf :OperatingSystem .
+
+
+###  http://example.org/laptop-ontology#M1
+:M1 rdf:type owl:Class ;
+    rdfs:subClassOf :AppleSilicon .
+
+
+###  http://example.org/laptop-ontology#M2
+:M2 rdf:type owl:Class ;
+    rdfs:subClassOf :AppleSilicon .
+
+
+###  http://example.org/laptop-ontology#M3
+:M3 rdf:type owl:Class ;
+    rdfs:subClassOf :AppleSilicon .
+
+
+###  http://example.org/laptop-ontology#M4
+:M4 rdf:type owl:Class ;
+    rdfs:subClassOf :AppleSilicon .
+
+
+###  http://example.org/laptop-ontology#M5
+:M5 rdf:type owl:Class ;
+    rdfs:subClassOf :AppleSilicon .
+
+
+###  http://example.org/laptop-ontology#MSI
+:MSI rdf:type owl:Class ;
+     rdfs:subClassOf :Brand .
+
+
+###  http://example.org/laptop-ontology#Memory
+:Memory rdf:type owl:Class ;
+        rdfs:subClassOf :Component .
+
+
+###  http://example.org/laptop-ontology#Microsoft
+:Microsoft rdf:type owl:Class ;
+           rdfs:subClassOf :Brand .
+
+
+###  http://example.org/laptop-ontology#MidRangeLaptop
+:MidRangeLaptop rdf:type owl:Class ;
+                rdfs:subClassOf :PriceRange .
+
+
+###  http://example.org/laptop-ontology#NVIDIA
+:NVIDIA rdf:type owl:Class ;
+        rdfs:subClassOf :DedicatedGPU .
+
+
+###  http://example.org/laptop-ontology#NVMeSSD
+:NVMeSSD rdf:type owl:Class ;
+         rdfs:subClassOf :SSD .
+
+
+###  http://example.org/laptop-ontology#OLEDDisplay
+:OLEDDisplay rdf:type owl:Class ;
+             rdfs:subClassOf :Display .
+
+
+###  http://example.org/laptop-ontology#OperatingSystem
+:OperatingSystem rdf:type owl:Class .
+
+
+###  http://example.org/laptop-ontology#PremiumLaptop
+:PremiumLaptop rdf:type owl:Class ;
+               rdfs:subClassOf :PriceRange .
+
+
+###  http://example.org/laptop-ontology#PriceRange
+:PriceRange rdf:type owl:Class .
+
+
+###  http://example.org/laptop-ontology#Processor
+:Processor rdf:type owl:Class ;
+           rdfs:subClassOf :Component .
+
+
+###  http://example.org/laptop-ontology#QHDDisplay
+:QHDDisplay rdf:type owl:Class ;
+            rdfs:subClassOf :Display .
+
+
+###  http://example.org/laptop-ontology#QualcommProcessor
+:QualcommProcessor rdf:type owl:Class ;
+                   rdfs:subClassOf :Processor .
+
+
+###  http://example.org/laptop-ontology#RAM
+:RAM rdf:type owl:Class ;
+     rdfs:subClassOf :Memory .
+
+
+###  http://example.org/laptop-ontology#Radeon
+:Radeon rdf:type owl:Class ;
+        rdfs:subClassOf :AMDGPU .
+
+
+###  http://example.org/laptop-ontology#Ryzen3
+:Ryzen3 rdf:type owl:Class ;
+        rdfs:subClassOf :AMDProcessor .
+
+
+###  http://example.org/laptop-ontology#Ryzen5
+:Ryzen5 rdf:type owl:Class ;
+        rdfs:subClassOf :AMDProcessor .
+
+
+###  http://example.org/laptop-ontology#Ryzen7
+:Ryzen7 rdf:type owl:Class ;
+        rdfs:subClassOf :AMDProcessor .
+
+
+###  http://example.org/laptop-ontology#Ryzen9
+:Ryzen9 rdf:type owl:Class ;
+        rdfs:subClassOf :AMDProcessor .
+
+
+###  http://example.org/laptop-ontology#RyzenAI
+:RyzenAI rdf:type owl:Class ;
+         rdfs:subClassOf :AMDProcessor .
+
+
+###  http://example.org/laptop-ontology#SATA_SSD
+:SATA_SSD rdf:type owl:Class ;
+          rdfs:subClassOf :SSD .
+
+
+###  http://example.org/laptop-ontology#SSD
+:SSD rdf:type owl:Class ;
+     rdfs:subClassOf :Storage .
+
+
+###  http://example.org/laptop-ontology#SnapdragonX
+:SnapdragonX rdf:type owl:Class ;
+             rdfs:subClassOf :QualcommProcessor .
+
+
+###  http://example.org/laptop-ontology#Storage
+:Storage rdf:type owl:Class ;
+         rdfs:subClassOf :Component .
+
+
+###  http://example.org/laptop-ontology#TouchscreenDisplay
+:TouchscreenDisplay rdf:type owl:Class ;
+                    rdfs:subClassOf :Display .
+
+
+###  http://example.org/laptop-ontology#TwoInOneLaptop
+:TwoInOneLaptop rdf:type owl:Class ;
+                rdfs:subClassOf :Laptop .
+
+
+###  http://example.org/laptop-ontology#UHDDisplay
+:UHDDisplay rdf:type owl:Class ;
+            rdfs:subClassOf :Display .
+
+
+###  http://example.org/laptop-ontology#Ubuntu
+:Ubuntu rdf:type owl:Class ;
+        rdfs:subClassOf :Linux .
+
+
+###  http://example.org/laptop-ontology#Ultrabook
+:Ultrabook rdf:type owl:Class ;
+           rdfs:subClassOf :Laptop .
+
+
+###  http://example.org/laptop-ontology#Windows
+:Windows rdf:type owl:Class ;
+         rdfs:subClassOf :OperatingSystem .
+
+
+###  http://example.org/laptop-ontology#Windows10
+:Windows10 rdf:type owl:Class ;
+           rdfs:subClassOf :Windows .
+
+
+###  http://example.org/laptop-ontology#Windows11
+:Windows11 rdf:type owl:Class ;
+           rdfs:subClassOf :Windows .
+
+
+###  http://example.org/laptop-ontology#WorkstationLaptop
+:WorkstationLaptop rdf:type owl:Class ;
+                   rdfs:subClassOf :Laptop .
+
+
+###  http://example.org/laptop-ontology#macOS
+:macOS rdf:type owl:Class ;
+       rdfs:subClassOf :OperatingSystem .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/laptop-ontology#AppleM3Max
+:AppleM3Max rdf:type owl:NamedIndividual ,
+                     :M3 ;
+            :jumlahCore 16 ;
+            :jumlahThread 16 ;
+            :namaProcessor "Apple M3 Max" ;
+            :nodeProsesNm 3 .
+
+
+###  http://example.org/laptop-ontology#AppleM3MaxGPU
+:AppleM3MaxGPU rdf:type owl:NamedIndividual ,
+                        :AppleIntegratedGraphics ;
+               :adalahDedicated "false"^^xsd:boolean ;
+               :namaGPU "Apple M3 Max GPU" .
+
+
+###  http://example.org/laptop-ontology#AsusTUFGaming
+:AsusTUFGaming rdf:type owl:NamedIndividual ,
+                        :GamingLaptop ;
+               :memilikiGPU :RTX5090 ;
+               :harga "2.0E7"^^xsd:float ;
+               :namaOS "Windows 11 Home" .
+
+
+###  http://example.org/laptop-ontology#IntelCoreI9
+:IntelCoreI9 rdf:type owl:NamedIndividual ,
+                      :IntelCore ;
+             :jumlahCore 24 ;
+             :jumlahThread 32 ;
+             :namaProcessor "Intel Core i9-13980HX" .
+
+
+###  http://example.org/laptop-ontology#MacBookDisplay16
+:MacBookDisplay16 rdf:type owl:NamedIndividual ,
+                           :Display ;
+                  :adalahTouchscreen "false"^^xsd:boolean ;
+                  :jenisPanel "Mini-LED" ;
+                  :kecerahanNits 1600 ;
+                  :lebarResolusi 3456 ;
+                  :namaResolusi "Liquid Retina XDR" ;
+                  :refreshRateHz 120 ;
+                  :tinggiResolusi 2234 ;
+                  :ukuranLayarInch 16.2 .
+
+
+###  http://example.org/laptop-ontology#MacBookSSD1TB
+:MacBookSSD1TB rdf:type owl:NamedIndividual ,
+                        :NVMeSSD ;
+               :jenisInterface "PCIe" ;
+               :jenisStorage "SSD" ;
+               :kapasitasStorageGB 1024 .
+
+
+###  http://example.org/laptop-ontology#ROGDisplay16
+:ROGDisplay16 rdf:type owl:NamedIndividual ,
+                       :IPSDisplay ;
+              :adalahTouchscreen "false"^^xsd:boolean ;
+              :jenisPanel "IPS" ;
+              :lebarResolusi 1920 ;
+              :namaResolusi "WUXGA" ;
+              :refreshRateHz 165 ;
+              :tinggiResolusi 1200 ;
+              :ukuranLayarInch 16.0 .
+
+
+###  http://example.org/laptop-ontology#ROGRAM16GB
+:ROGRAM16GB rdf:type owl:NamedIndividual ,
+                     :DDR5RAM ;
+            :dapatDiUpgrade "true"^^xsd:boolean ;
+            :jenisRAM "DDR5" ;
+            :kapasitasGB 16 ;
+            :kecepatanMHz 4800 .
+
+
+###  http://example.org/laptop-ontology#ROGSSD1TB
+:ROGSSD1TB rdf:type owl:NamedIndividual ,
+                    :NVMeSSD ;
+           :jenisInterface "NVMe PCIe" ;
+           :jenisStorage "SSD" ;
+           :kapasitasStorageGB 1024 .
+
+
+###  http://example.org/laptop-ontology#RTX4070Laptop
+:RTX4070Laptop rdf:type owl:NamedIndividual ,
+                        :GeForceRTX ;
+               :adalahDedicated "true"^^xsd:boolean ;
+               :namaGPU "NVIDIA GeForce RTX 4070 Laptop GPU" ;
+               :vramGB 8 .
+
+
+###  http://example.org/laptop-ontology#RTX5090
+:RTX5090 rdf:type owl:NamedIndividual ,
+                  :DedicatedGPU .
+
+
+###  http://example.org/laptop-ontology#Windows11OS
+:Windows11OS rdf:type owl:NamedIndividual ,
+                      :Windows11 ;
+             :arsitektur "x64" ;
+             :namaOS "Windows" ;
+             :versi "Windows 11" .
+
+
+###  http://example.org/laptop-ontology#appleBrand
+:appleBrand rdf:type owl:NamedIndividual ,
+                     :Apple ;
+            :namaBrand "Apple" ;
+            :negaraAsal "United States" .
+
+
+###  http://example.org/laptop-ontology#asusBrand
+:asusBrand rdf:type owl:NamedIndividual ,
+                    :ASUS ;
+           :namaBrand "ASUS" ;
+           :negaraAsal "Taiwan" .
+
+
+###  http://example.org/laptop-ontology#highEndRange
+:highEndRange rdf:type owl:NamedIndividual ,
+                       :HighEndLaptop ;
+              :hargaMaksimum 30000000.0 ;
+              :hargaMinimum 20000000.0 ;
+              :namaRange "High-End" .
+
+
+###  http://example.org/laptop-ontology#macOSSonoma
+:macOSSonoma rdf:type owl:NamedIndividual ,
+                      :macOS ;
+             :arsitektur "ARM64" ;
+             :namaOS "macOS" ;
+             :versi "Sonoma" .
+
+
+###  http://example.org/laptop-ontology#premiumRange
+:premiumRange rdf:type owl:NamedIndividual ,
+                       :PremiumLaptop ;
+              :hargaMaksimum 100000000.0 ;
+              :hargaMinimum 30000000.0 ;
+              :namaRange "Premium" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+
+
+#################################################################
+#    Katalog tambahan 100 model laptop dan komponen terhubung
+#    Catatan: harga dan konfigurasi bersifat data contoh/estimasi
+#    untuk demonstrasi ontologi, bukan spesifikasi harga real-time.
+#################################################################
+
+ :acerBrand rdf:type owl:NamedIndividual, :Acer ;
+    :namaBrand "Acer" ;
+    :negaraAsal "Taiwan" .
+ :dellBrand rdf:type owl:NamedIndividual, :Dell ;
+    :namaBrand "Dell" ;
+    :negaraAsal "United States" .
+ :hpBrand rdf:type owl:NamedIndividual, :HP ;
+    :namaBrand "HP" ;
+    :negaraAsal "United States" .
+ :lenovoBrand rdf:type owl:NamedIndividual, :Lenovo ;
+    :namaBrand "Lenovo" ;
+    :negaraAsal "China" .
+ :msiBrand rdf:type owl:NamedIndividual, :MSI ;
+    :namaBrand "MSI" ;
+    :negaraAsal "Taiwan" .
+ :microsoftBrand rdf:type owl:NamedIndividual, :Microsoft ;
+    :namaBrand "Microsoft" ;
+    :negaraAsal "United States" .
+ :CPU_AMDRyzen57520U rdf:type owl:NamedIndividual, :Processor, :AMDProcessor ;
+    :namaProcessor "AMD Ryzen 5 7520U" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :GPU_AMDIntegratedGraphics rdf:type owl:NamedIndividual, :GraphicsCard, :AMDIntegratedGraphics ;
+    :namaGPU "AMDIntegratedGraphics" ; :adalahDedicated "false"^^xsd:boolean ; :vramGB 0 .
+ :RAM_8GB_DDR4 rdf:type owl:NamedIndividual, :RAM, :DDR4RAM ;
+    :jenisRAM "DDR4" ; :kapasitasGB 8 ; :kecepatanMHz 3200 ; :dapatDiUpgrade "true"^^xsd:boolean .
+ :SSD_512GB rdf:type owl:NamedIndividual, :Storage, :SSD, :NVMeSSD ;
+    :jenisStorage "SSD" ; :jenisInterface "NVMe PCIe" ; :kapasitasStorageGB 512 .
+ :DISPLAY_FHDIPS rdf:type owl:NamedIndividual, :Display, :FullHDDisplay ;
+    :jenisPanel "IPS" ; :namaResolusi "FHD IPS" ; :ukuranLayarInch 14 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 60 .
+ :OS_Windows11Home rdf:type owl:NamedIndividual, :OperatingSystem, :Windows11 ;
+    :namaOS "Windows 11 Home" ; :versi "Windows 11 Home" .
+ :CPU_IntelCorei51335U rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core i5-1335U" ; :jumlahCore 12 ; :jumlahThread 24 .
+ :GPU_IntelGraphics rdf:type owl:NamedIndividual, :GraphicsCard, :IntelGraphics ;
+    :namaGPU "IntelGraphics" ; :adalahDedicated "false"^^xsd:boolean ; :vramGB 0 .
+ :RAM_16GB_DDR5 rdf:type owl:NamedIndividual, :RAM, :DDR5RAM ;
+    :jenisRAM "DDR5" ; :kapasitasGB 16 ; :kecepatanMHz 5600 ; :dapatDiUpgrade "true"^^xsd:boolean .
+ :CPU_IntelCoreUltra7155H rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core Ultra 7 155H" ; :jumlahCore 12 ; :jumlahThread 24 .
+ :SSD_1024GB rdf:type owl:NamedIndividual, :Storage, :SSD, :NVMeSSD ;
+    :jenisStorage "SSD" ; :jenisInterface "NVMe PCIe" ; :kapasitasStorageGB 1024 .
+ :DISPLAY_OLED28K rdf:type owl:NamedIndividual, :Display, :OLEDDisplay ;
+    :jenisPanel "OLED" ; :namaResolusi "OLED 2.8K" ; :ukuranLayarInch 14 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 60 .
+ :CPU_AMDRyzen78840U rdf:type owl:NamedIndividual, :Processor, :AMDProcessor ;
+    :namaProcessor "AMD Ryzen 7 8840U" ; :jumlahCore 12 ; :jumlahThread 24 .
+ :RAM_32GB_DDR5 rdf:type owl:NamedIndividual, :RAM, :DDR5RAM ;
+    :jenisRAM "DDR5" ; :kapasitasGB 32 ; :kecepatanMHz 5600 ; :dapatDiUpgrade "true"^^xsd:boolean .
+ :CPU_AMDRyzen98945HS rdf:type owl:NamedIndividual, :Processor, :AMDProcessor ;
+    :namaProcessor "AMD Ryzen 9 8945HS" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :GPU_GeForceRTX rdf:type owl:NamedIndividual, :GraphicsCard, :GeForceRTX ;
+    :namaGPU "GeForceRTX" ; :adalahDedicated "true"^^xsd:boolean ; :vramGB 8 .
+ :DISPLAY_OLEDQHD rdf:type owl:NamedIndividual, :Display, :OLEDDisplay ;
+    :jenisPanel "OLED" ; :namaResolusi "OLED QHD" ; :ukuranLayarInch 14 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 144 .
+ :CPU_IntelCoreUltra9185H rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core Ultra 9 185H" ; :jumlahCore 16 ; :jumlahThread 32 .
+ :CPU_IntelCorei914900HX rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core i9-14900HX" ; :jumlahCore 24 ; :jumlahThread 48 .
+ :DISPLAY_QHDIPS rdf:type owl:NamedIndividual, :Display, :QHDDisplay ;
+    :jenisPanel "IPS" ; :namaResolusi "QHD IPS" ; :ukuranLayarInch 16 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 144 .
+ :CPU_AMDRyzen78845HS rdf:type owl:NamedIndividual, :Processor, :AMDProcessor ;
+    :namaProcessor "AMD Ryzen 7 8845HS" ; :jumlahCore 12 ; :jumlahThread 24 .
+ :CPU_IntelCorei713620H rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core i7-13620H" ; :jumlahCore 16 ; :jumlahThread 32 .
+ :OS_Windows11Pro rdf:type owl:NamedIndividual, :OperatingSystem, :Windows11 ;
+    :namaOS "Windows 11 Pro" ; :versi "Windows 11 Pro" .
+ :CPU_IntelCorei913980HX rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core i9-13980HX" ; :jumlahCore 24 ; :jumlahThread 48 .
+ :SSD_2048GB rdf:type owl:NamedIndividual, :Storage, :SSD, :NVMeSSD ;
+    :jenisStorage "SSD" ; :jenisInterface "NVMe PCIe" ; :kapasitasStorageGB 2048 .
+ :DISPLAY_OLED4K rdf:type owl:NamedIndividual, :Display, :OLEDDisplay ;
+    :jenisPanel "OLED" ; :namaResolusi "OLED 4K" ; :ukuranLayarInch 16 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 60 .
+ :CPU_AppleM2 rdf:type owl:NamedIndividual, :Processor, :AppleSilicon ;
+    :namaProcessor "Apple M2" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :GPU_AppleIntegratedGraphics rdf:type owl:NamedIndividual, :GraphicsCard, :AppleIntegratedGraphics ;
+    :namaGPU "AppleIntegratedGraphics" ; :adalahDedicated "false"^^xsd:boolean ; :vramGB 0 .
+ :SSD_256GB rdf:type owl:NamedIndividual, :Storage, :SSD, :NVMeSSD ;
+    :jenisStorage "SSD" ; :jenisInterface "NVMe PCIe" ; :kapasitasStorageGB 256 .
+ :DISPLAY_LiquidRetina rdf:type owl:NamedIndividual, :Display, :FullHDDisplay ;
+    :jenisPanel "IPS" ; :namaResolusi "Liquid Retina" ; :ukuranLayarInch 13.6 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 60 .
+ :OS_macOS rdf:type owl:NamedIndividual, :OperatingSystem, :macOS ;
+    :namaOS "macOS" ; :versi "macOS" .
+ :CPU_AppleM3 rdf:type owl:NamedIndividual, :Processor, :AppleSilicon ;
+    :namaProcessor "Apple M3" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :CPU_AppleM4 rdf:type owl:NamedIndividual, :Processor, :AppleSilicon ;
+    :namaProcessor "Apple M4" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :DISPLAY_LiquidRetinaXDR rdf:type owl:NamedIndividual, :Display, :FullHDDisplay ;
+    :jenisPanel "IPS" ; :namaResolusi "Liquid Retina XDR" ; :ukuranLayarInch 14.2 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 60 .
+ :CPU_AppleM3Pro rdf:type owl:NamedIndividual, :Processor, :AppleSilicon ;
+    :namaProcessor "Apple M3 Pro" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :RAM_18GB_DDR5 rdf:type owl:NamedIndividual, :RAM, :DDR5RAM ;
+    :jenisRAM "DDR5" ; :kapasitasGB 18 ; :kecepatanMHz 5600 ; :dapatDiUpgrade "false"^^xsd:boolean .
+ :CPU_AppleM4Pro rdf:type owl:NamedIndividual, :Processor, :AppleSilicon ;
+    :namaProcessor "Apple M4 Pro" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :RAM_24GB_DDR5 rdf:type owl:NamedIndividual, :RAM, :DDR5RAM ;
+    :jenisRAM "DDR5" ; :kapasitasGB 24 ; :kecepatanMHz 5600 ; :dapatDiUpgrade "false"^^xsd:boolean .
+ :CPU_AppleM4Max rdf:type owl:NamedIndividual, :Processor, :AppleSilicon ;
+    :namaProcessor "Apple M4 Max" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :RAM_36GB_DDR5 rdf:type owl:NamedIndividual, :RAM, :DDR5RAM ;
+    :jenisRAM "DDR5" ; :kapasitasGB 36 ; :kecepatanMHz 5600 ; :dapatDiUpgrade "false"^^xsd:boolean .
+ :CPU_AMDRyzen37320U rdf:type owl:NamedIndividual, :Processor, :AMDProcessor ;
+    :namaProcessor "AMD Ryzen 3 7320U" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :CPU_IntelCoreUltra5125H rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core Ultra 5 125H" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :CPU_IntelCorei513420H rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core i5-13420H" ; :jumlahCore 12 ; :jumlahThread 24 .
+ :CPU_IntelCorei714700HX rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core i7-14700HX" ; :jumlahCore 16 ; :jumlahThread 32 .
+ :CPU_AMDRyzen55625C rdf:type owl:NamedIndividual, :Processor, :AMDProcessor ;
+    :namaProcessor "AMD Ryzen 5 5625C" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :DISPLAY_FHDTouch rdf:type owl:NamedIndividual, :Display, :FullHDDisplay ;
+    :jenisPanel "IPS" ; :namaResolusi "FHD Touch" ; :ukuranLayarInch 14 ; :adalahTouchscreen "true"^^xsd:boolean ; :refreshRateHz 60 .
+ :OS_ChromeOS rdf:type owl:NamedIndividual, :OperatingSystem, :ChromeOS ;
+    :namaOS "ChromeOS" ; :versi "ChromeOS" .
+ :CPU_IntelCorei71360P rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core i7-1360P" ; :jumlahCore 16 ; :jumlahThread 32 .
+ :CPU_IntelCorei51334U rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core i5-1334U" ; :jumlahCore 12 ; :jumlahThread 24 .
+ :DISPLAY_OLED3K rdf:type owl:NamedIndividual, :Display, :OLEDDisplay ;
+    :jenisPanel "OLED" ; :namaResolusi "OLED 3K" ; :ukuranLayarInch 13.4 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 60 .
+ :DISPLAY_OLED32K rdf:type owl:NamedIndividual, :Display, :OLEDDisplay ;
+    :jenisPanel "OLED" ; :namaResolusi "OLED 3.2K" ; :ukuranLayarInch 14.5 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 60 .
+ :CPU_IntelCoreUltra5135U rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core Ultra 5 135U" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :CPU_IntelCoreUltra7165U rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core Ultra 7 165U" ; :jumlahCore 12 ; :jumlahThread 24 .
+ :CPU_IntelCoreUltra7165H rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core Ultra 7 165H" ; :jumlahCore 12 ; :jumlahThread 24 .
+ :CPU_IntelCorei713650HX rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core i7-13650HX" ; :jumlahCore 16 ; :jumlahThread 32 .
+ :CPU_IntelCorei31315U rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core i3-1315U" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :CPU_AMDRyzen57530U rdf:type owl:NamedIndividual, :Processor, :AMDProcessor ;
+    :namaProcessor "AMD Ryzen 5 7530U" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :CPU_IntelCoreUltra5125U rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core Ultra 5 125U" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :DISPLAY_OLEDTouch rdf:type owl:NamedIndividual, :Display, :OLEDDisplay ;
+    :jenisPanel "OLED" ; :namaResolusi "OLED Touch" ; :ukuranLayarInch 14 ; :adalahTouchscreen "true"^^xsd:boolean ; :refreshRateHz 60 .
+ :CPU_QualcommSnapdragonXElite rdf:type owl:NamedIndividual, :Processor, :QualcommProcessor ;
+    :namaProcessor "Qualcomm Snapdragon X Elite" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :GPU_QualcommGPU rdf:type owl:NamedIndividual, :GraphicsCard, :IntegratedGPU ;
+    :namaGPU "QualcommGPU" ; :adalahDedicated "false"^^xsd:boolean ; :vramGB 0 .
+ :DISPLAY_22KIPS rdf:type owl:NamedIndividual, :Display, :FullHDDisplay ;
+    :jenisPanel "IPS" ; :namaResolusi "2.2K IPS" ; :ukuranLayarInch 14 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 60 .
+ :DISPLAY_OLED28KTouch rdf:type owl:NamedIndividual, :Display, :OLEDDisplay ;
+    :jenisPanel "OLED" ; :namaResolusi "OLED 2.8K Touch" ; :ukuranLayarInch 14 ; :adalahTouchscreen "true"^^xsd:boolean ; :refreshRateHz 60 .
+ :DISPLAY_WUXGAIPS rdf:type owl:NamedIndividual, :Display, :FullHDDisplay ;
+    :jenisPanel "IPS" ; :namaResolusi "WUXGA IPS" ; :ukuranLayarInch 14 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 60 .
+ :CPU_AMDRyzen58645HS rdf:type owl:NamedIndividual, :Processor, :AMDProcessor ;
+    :namaProcessor "AMD Ryzen 5 8645HS" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :CPU_IntelCoreUltra7258V rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core Ultra 7 258V" ; :jumlahCore 12 ; :jumlahThread 24 .
+ :CPU_AMDRyzen78840HS rdf:type owl:NamedIndividual, :Processor, :AMDProcessor ;
+    :namaProcessor "AMD Ryzen 7 8840HS" ; :jumlahCore 12 ; :jumlahThread 24 .
+ :CPU_AMDRyzen77735U rdf:type owl:NamedIndividual, :Processor, :AMDProcessor ;
+    :namaProcessor "AMD Ryzen 7 7735U" ; :jumlahCore 12 ; :jumlahThread 24 .
+ :CPU_IntelCoreUltra7155U rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core Ultra 7 155U" ; :jumlahCore 12 ; :jumlahThread 24 .
+ :CPU_IntelCorei513450HX rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core i5-13450HX" ; :jumlahCore 12 ; :jumlahThread 24 .
+ :RAM_64GB_DDR5 rdf:type owl:NamedIndividual, :RAM, :DDR5RAM ;
+    :jenisRAM "DDR5" ; :kapasitasGB 64 ; :kecepatanMHz 5600 ; :dapatDiUpgrade "true"^^xsd:boolean .
+ :DISPLAY_QHDTouch rdf:type owl:NamedIndividual, :Display, :QHDDisplay ;
+    :jenisPanel "IPS" ; :namaResolusi "QHD Touch" ; :ukuranLayarInch 17 ; :adalahTouchscreen "true"^^xsd:boolean ; :refreshRateHz 60 .
+ :CPU_IntelCorei51235U rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core i5-1235U" ; :jumlahCore 12 ; :jumlahThread 24 .
+ :DISPLAY_PixelSense rdf:type owl:NamedIndividual, :Display, :FullHDDisplay ;
+    :jenisPanel "IPS" ; :namaResolusi "PixelSense" ; :ukuranLayarInch 12.4 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 60 .
+ :CPU_IntelCoreUltra5135H rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core Ultra 5 135H" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :DISPLAY_PixelSenseTouch rdf:type owl:NamedIndividual, :Display, :FullHDDisplay ;
+    :jenisPanel "IPS" ; :namaResolusi "PixelSense Touch" ; :ukuranLayarInch 13.5 ; :adalahTouchscreen "true"^^xsd:boolean ; :refreshRateHz 60 .
+ :CPU_QualcommSnapdragonXPlus rdf:type owl:NamedIndividual, :Processor, :QualcommProcessor ;
+    :namaProcessor "Qualcomm Snapdragon X Plus" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :CPU_AMDRyzen97940HS rdf:type owl:NamedIndividual, :Processor, :AMDProcessor ;
+    :namaProcessor "AMD Ryzen 9 7940HS" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :CPU_IntelCorei71365U rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core i7-1365U" ; :jumlahCore 16 ; :jumlahThread 32 .
+ :DISPLAY_WUXGATouch rdf:type owl:NamedIndividual, :Display, :FullHDDisplay ;
+    :jenisPanel "IPS" ; :namaResolusi "WUXGA Touch" ; :ukuranLayarInch 13.5 ; :adalahTouchscreen "true"^^xsd:boolean ; :refreshRateHz 60 .
+ :DISPLAY_MiniLED32K rdf:type owl:NamedIndividual, :Display, :QHDDisplay ;
+    :jenisPanel "Mini-LED" ; :namaResolusi "Mini-LED 3.2K" ; :ukuranLayarInch 16 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 60 .
+ :SSD_4096GB rdf:type owl:NamedIndividual, :Storage, :SSD, :NVMeSSD ;
+    :jenisStorage "SSD" ; :jenisInterface "NVMe PCIe" ; :kapasitasStorageGB 4096 .
+ :DISPLAY_MiniLED4K rdf:type owl:NamedIndividual, :Display, :FullHDDisplay ;
+    :jenisPanel "Mini-LED" ; :namaResolusi "Mini-LED 4K" ; :ukuranLayarInch 18 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 60 .
+ :CPU_IntelCeleronN4500 rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Celeron N4500" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :SSD_128GB rdf:type owl:NamedIndividual, :Storage, :SSD, :NVMeSSD ;
+    :jenisStorage "SSD" ; :jenisInterface "NVMe PCIe" ; :kapasitasStorageGB 128 .
+ :CPU_IntelCorei3N305 rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core i3-N305" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :CPU_QualcommSnapdragon7cGen2 rdf:type owl:NamedIndividual, :Processor, :QualcommProcessor ;
+    :namaProcessor "Qualcomm Snapdragon 7c Gen 2" ; :jumlahCore 8 ; :jumlahThread 16 .
+ :CPU_IntelCorei913950HX rdf:type owl:NamedIndividual, :Processor, :IntelProcessor ;
+    :namaProcessor "Intel Core i9-13950HX" ; :jumlahCore 24 ; :jumlahThread 48 .
+ :DISPLAY_UHDIPS rdf:type owl:NamedIndividual, :Display, :FullHDDisplay ;
+    :jenisPanel "IPS" ; :namaResolusi "UHD IPS" ; :ukuranLayarInch 16 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 60 .
+ :DISPLAY_MiniLEDQHD rdf:type owl:NamedIndividual, :Display, :QHDDisplay ;
+    :jenisPanel "Mini-LED" ; :namaResolusi "Mini-LED QHD" ; :ukuranLayarInch 18 ; :adalahTouchscreen "false"^^xsd:boolean ; :refreshRateHz 60 .
+ :range_BudgetLaptop rdf:type owl:NamedIndividual, :PriceRange ; :namaRange "Budget" ; :hargaMinimum 0.0 ; :hargaMaksimum 8000000.0 .
+ :range_MidRangeLaptop rdf:type owl:NamedIndividual, :PriceRange ; :namaRange "Mid-Range" ; :hargaMinimum 8000000.0 ; :hargaMaksimum 15000000.0 .
+ :range_PremiumLaptop rdf:type owl:NamedIndividual, :PriceRange ; :namaRange "Premium" ; :hargaMinimum 25000000.0 ; :hargaMaksimum 40000000.0 .
+ :range_HighEndLaptop rdf:type owl:NamedIndividual, :PriceRange ; :namaRange "High-End" ; :hargaMinimum 40000000.0 ; :hargaMaksimum 100000000.0 .
+ :range_GamingLaptop rdf:type owl:NamedIndividual, :PriceRange ; :namaRange "Gaming" ; :hargaMinimum 0.0 ; :hargaMaksimum 100000000.0 .
+ :range_BusinessLaptop rdf:type owl:NamedIndividual, :PriceRange ; :namaRange "Business" ; :hargaMinimum 0.0 ; :hargaMaksimum 100000000.0 .
+ :range_Ultrabook rdf:type owl:NamedIndividual, :PriceRange ; :namaRange "Ultrabook" ; :hargaMinimum 0.0 ; :hargaMaksimum 100000000.0 .
+ :range_TwoInOneLaptop rdf:type owl:NamedIndividual, :PriceRange ; :namaRange "2-in-1" ; :hargaMinimum 0.0 ; :hargaMaksimum 100000000.0 .
+ :range_WorkstationLaptop rdf:type owl:NamedIndividual, :PriceRange ; :namaRange "Workstation" ; :hargaMinimum 0.0 ; :hargaMaksimum 100000000.0 .
+ :Laptop_001_VivobookGo14E1404 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
+    :namaModel "ASUS Vivobook Go 14 E1404" ; :nomorModel "CAT-001" ; :tahunRilis 2024 ;
+    :harga 7500000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_AMDRyzen57520U ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_002_Vivobook14X1404 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
+    :namaModel "ASUS Vivobook 14 X1404" ; :nomorModel "CAT-002" ; :tahunRilis 2025 ;
+    :harga 8500000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCorei51335U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_003_Vivobook15X1504 rdf:type owl:NamedIndividual, :Laptop, :MidRangeLaptop ;
+    :namaModel "ASUS Vivobook 15 X1504" ; :nomorModel "CAT-003" ; :tahunRilis 2026 ;
+    :harga 9500000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCorei51335U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_004_Zenbook14OLEDUX3405 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "ASUS Zenbook 14 OLED UX3405" ; :nomorModel "CAT-004" ; :tahunRilis 2023 ;
+    :harga 21900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_005_ZenbookS13OLED rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "ASUS Zenbook S 13 OLED" ; :nomorModel "CAT-005" ; :tahunRilis 2024 ;
+    :harga 23900000.0 ; :beratKg 1.86 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_AMDRyzen78840U ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_006_ROGZephyrusG14 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "ASUS ROG Zephyrus G14" ; :nomorModel "CAT-006" ; :tahunRilis 2025 ;
+    :harga 29900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_AMDRyzen98945HS ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLEDQHD ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_007_ROGZephyrusG16 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "ASUS ROG Zephyrus G16" ; :nomorModel "CAT-007" ; :tahunRilis 2026 ;
+    :harga 42900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLEDQHD ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_008_ROGStrixG16 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "ASUS ROG Strix G16" ; :nomorModel "CAT-008" ; :tahunRilis 2023 ;
+    :harga 27900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_009_TUFGamingA15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "ASUS TUF Gaming A15" ; :nomorModel "CAT-009" ; :tahunRilis 2024 ;
+    :harga 16900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_AMDRyzen78845HS ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_010_TUFGamingF15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "ASUS TUF Gaming F15" ; :nomorModel "CAT-010" ; :tahunRilis 2025 ;
+    :harga 15900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCorei713620H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_011_ExpertBookB1 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
+    :namaModel "ASUS ExpertBook B1" ; :nomorModel "CAT-011" ; :tahunRilis 2026 ;
+    :harga 9900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCorei51335U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_012_ProArtStudiobook16OLED rdf:type owl:NamedIndividual, :Laptop, :WorkstationLaptop ;
+    :namaModel "ASUS ProArt Studiobook 16 OLED" ; :nomorModel "CAT-012" ; :tahunRilis 2023 ;
+    :harga 45900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCorei913980HX ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED4K ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_013_MacBookAir13M2 rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
+    :namaModel "Apple MacBook Air 13 M2" ; :nomorModel "CAT-013" ; :tahunRilis 2024 ;
+    :harga 14900000.0 ; :beratKg 1.88 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM2 ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_256GB ;
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetina ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_macOS .
+ :Laptop_014_MacBookAir13M3 rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
+    :namaModel "Apple MacBook Air 13 M3" ; :nomorModel "CAT-014" ; :tahunRilis 2025 ;
+    :harga 17900000.0 ; :beratKg 1.88 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM3 ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetina ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_macOS .
+ :Laptop_015_MacBookAir15M3 rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
+    :namaModel "Apple MacBook Air 15 M3" ; :nomorModel "CAT-015" ; :tahunRilis 2026 ;
+    :harga 21900000.0 ; :beratKg 1.96 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM3 ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetina ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_macOS .
+ :Laptop_016_MacBookAir13M4 rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
+    :namaModel "Apple MacBook Air 13 M4" ; :nomorModel "CAT-016" ; :tahunRilis 2023 ;
+    :harga 18900000.0 ; :beratKg 1.88 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM4 ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetina ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_macOS .
+ :Laptop_017_MacBookAir15M4 rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
+    :namaModel "Apple MacBook Air 15 M4" ; :nomorModel "CAT-017" ; :tahunRilis 2024 ;
+    :harga 22900000.0 ; :beratKg 1.96 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM4 ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetina ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_macOS .
+ :Laptop_018_MacBookPro14M3 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "Apple MacBook Pro 14 M3" ; :nomorModel "CAT-018" ; :tahunRilis 2025 ;
+    :harga 26900000.0 ; :beratKg 1.91 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM3 ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS .
+ :Laptop_019_MacBookPro14M3Pro rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "Apple MacBook Pro 14 M3 Pro" ; :nomorModel "CAT-019" ; :tahunRilis 2026 ;
+    :harga 32900000.0 ; :beratKg 1.91 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM3Pro ; :memilikiRAM :RAM_18GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS .
+ :Laptop_020_MacBookPro16M3Pro rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "Apple MacBook Pro 16 M3 Pro" ; :nomorModel "CAT-020" ; :tahunRilis 2023 ;
+    :harga 39900000.0 ; :beratKg 2.01 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM3Pro ; :memilikiRAM :RAM_18GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS .
+ :Laptop_021_MacBookPro14M4 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "Apple MacBook Pro 14 M4" ; :nomorModel "CAT-021" ; :tahunRilis 2024 ;
+    :harga 27900000.0 ; :beratKg 1.91 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM4 ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS .
+ :Laptop_022_MacBookPro14M4Pro rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "Apple MacBook Pro 14 M4 Pro" ; :nomorModel "CAT-022" ; :tahunRilis 2025 ;
+    :harga 35900000.0 ; :beratKg 1.91 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM4Pro ; :memilikiRAM :RAM_24GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS .
+ :Laptop_023_MacBookPro16M4Max rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop ;
+    :namaModel "Apple MacBook Pro 16 M4 Max" ; :nomorModel "CAT-023" ; :tahunRilis 2026 ;
+    :harga 59900000.0 ; :beratKg 2.01 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM4Max ; :memilikiRAM :RAM_36GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_macOS .
+ :Laptop_024_Aspire3A314 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
+    :namaModel "Acer Aspire 3 A314" ; :nomorModel "CAT-024" ; :tahunRilis 2023 ;
+    :harga 6500000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_AMDRyzen37320U ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_025_Aspire5A515 rdf:type owl:NamedIndividual, :Laptop, :MidRangeLaptop ;
+    :namaModel "Acer Aspire 5 A515" ; :nomorModel "CAT-025" ; :tahunRilis 2024 ;
+    :harga 9200000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCorei51335U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_026_SwiftGo14OLED rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
+    :namaModel "Acer Swift Go 14 OLED" ; :nomorModel "CAT-026" ; :tahunRilis 2025 ;
+    :harga 13900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCoreUltra5125H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_027_SwiftX14 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "Acer Swift X 14" ; :nomorModel "CAT-027" ; :tahunRilis 2026 ;
+    :harga 22900000.0 ; :beratKg 1.92 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_028_NitroV15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "Acer Nitro V 15" ; :nomorModel "CAT-028" ; :tahunRilis 2023 ;
+    :harga 13900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCorei513420H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_029_Nitro16 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "Acer Nitro 16" ; :nomorModel "CAT-029" ; :tahunRilis 2024 ;
+    :harga 20900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_AMDRyzen78845HS ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_030_PredatorHeliosNeo16 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "Acer Predator Helios Neo 16" ; :nomorModel "CAT-030" ; :tahunRilis 2025 ;
+    :harga 24900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCorei714700HX ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_031_PredatorTritonNeo16 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "Acer Predator Triton Neo 16" ; :nomorModel "CAT-031" ; :tahunRilis 2026 ;
+    :harga 32900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLEDQHD ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_032_TravelMateP2 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
+    :namaModel "Acer TravelMate P2" ; :nomorModel "CAT-032" ; :tahunRilis 2023 ;
+    :harga 8900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCorei51335U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_033_ChromebookSpin514 rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
+    :namaModel "Acer Chromebook Spin 514" ; :nomorModel "CAT-033" ; :tahunRilis 2024 ;
+    :harga 8500000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
+    :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_AMDRyzen55625C ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_256GB ;
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDTouch ; :memilikiOperatingSystem :OS_ChromeOS ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_ChromeOS .
+ :Laptop_034_Inspiron145430 rdf:type owl:NamedIndividual, :Laptop, :MidRangeLaptop ;
+    :namaModel "Dell Inspiron 14 5430" ; :nomorModel "CAT-034" ; :tahunRilis 2025 ;
+    :harga 11900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCorei71360P ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_035_Inspiron153530 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
+    :namaModel "Dell Inspiron 15 3530" ; :nomorModel "CAT-035" ; :tahunRilis 2026 ;
+    :harga 7800000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCorei51334U ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_036_XPS139340 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "Dell XPS 13 9340" ; :nomorModel "CAT-036" ; :tahunRilis 2023 ;
+    :harga 24900000.0 ; :beratKg 1.87 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED3K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_037_XPS149440 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "Dell XPS 14 9440" ; :nomorModel "CAT-037" ; :tahunRilis 2024 ;
+    :harga 32900000.0 ; :beratKg 1.92 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED32K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_038_XPS169640 rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop ;
+    :namaModel "Dell XPS 16 9640" ; :nomorModel "CAT-038" ; :tahunRilis 2025 ;
+    :harga 45900000.0 ; :beratKg 2.02 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED4K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_039_Latitude5450 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
+    :namaModel "Dell Latitude 5450" ; :nomorModel "CAT-039" ; :tahunRilis 2026 ;
+    :harga 18900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra5135U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_040_Latitude7450 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
+    :namaModel "Dell Latitude 7450" ; :nomorModel "CAT-040" ; :tahunRilis 2023 ;
+    :harga 25900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra7165U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_041_Precision3591 rdf:type owl:NamedIndividual, :Laptop, :WorkstationLaptop ;
+    :namaModel "Dell Precision 3591" ; :nomorModel "CAT-041" ; :tahunRilis 2024 ;
+    :harga 29900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra7165H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_042_G155530 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "Dell G15 5530" ; :nomorModel "CAT-042" ; :tahunRilis 2025 ;
+    :harga 18900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCorei713650HX ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_043_Alienwarem16R2 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "Dell Alienware m16 R2" ; :nomorModel "CAT-043" ; :tahunRilis 2026 ;
+    :harga 35900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_044_14sdq rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
+    :namaModel "HP 14s-dq" ; :nomorModel "CAT-044" ; :tahunRilis 2023 ;
+    :harga 6900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCorei31315U ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_045_Pavilion15 rdf:type owl:NamedIndividual, :Laptop, :MidRangeLaptop ;
+    :namaModel "HP Pavilion 15" ; :nomorModel "CAT-045" ; :tahunRilis 2024 ;
+    :harga 9900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_AMDRyzen57530U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_046_Envyx36014 rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
+    :namaModel "HP Envy x360 14" ; :nomorModel "CAT-046" ; :tahunRilis 2025 ;
+    :harga 16900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
+    :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCoreUltra5125U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLEDTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_047_OmniBookX14 rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
+    :namaModel "HP OmniBook X 14" ; :nomorModel "CAT-047" ; :tahunRilis 2026 ;
+    :harga 18900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_QualcommSnapdragonXElite ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_QualcommGPU ; :memilikiDisplay :DISPLAY_22KIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_048_Spectrex36014 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "HP Spectre x360 14" ; :nomorModel "CAT-048" ; :tahunRilis 2023 ;
+    :harga 25900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
+    :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28KTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_049_EliteBook840G11 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
+    :namaModel "HP EliteBook 840 G11" ; :nomorModel "CAT-049" ; :tahunRilis 2024 ;
+    :harga 21900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCoreUltra7165U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_050_ProBook440G11 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
+    :namaModel "HP ProBook 440 G11" ; :nomorModel "CAT-050" ; :tahunRilis 2025 ;
+    :harga 14900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCoreUltra5125U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_051_Victus15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "HP Victus 15" ; :nomorModel "CAT-051" ; :tahunRilis 2026 ;
+    :harga 13900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_AMDRyzen58645HS ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_052_Omen16 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "HP Omen 16" ; :nomorModel "CAT-052" ; :tahunRilis 2023 ;
+    :harga 24900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCorei714700HX ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_053_ZBookPowerG11 rdf:type owl:NamedIndividual, :Laptop, :WorkstationLaptop ;
+    :namaModel "HP ZBook Power G11" ; :nomorModel "CAT-053" ; :tahunRilis 2024 ;
+    :harga 31900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_054_IdeaPadSlim314 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
+    :namaModel "Lenovo IdeaPad Slim 3 14" ; :nomorModel "CAT-054" ; :tahunRilis 2025 ;
+    :harga 7200000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_AMDRyzen57520U ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_055_IdeaPadSlim514 rdf:type owl:NamedIndividual, :Laptop, :MidRangeLaptop ;
+    :namaModel "Lenovo IdeaPad Slim 5 14" ; :nomorModel "CAT-055" ; :tahunRilis 2026 ;
+    :harga 11900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_AMDRyzen78845HS ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_056_YogaSlim7iAuraEdition rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "Lenovo Yoga Slim 7i Aura Edition" ; :nomorModel "CAT-056" ; :tahunRilis 2023 ;
+    :harga 21900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCoreUltra7258V ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_057_Yoga72in114 rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
+    :namaModel "Lenovo Yoga 7 2-in-1 14" ; :nomorModel "CAT-057" ; :tahunRilis 2024 ;
+    :harga 16900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_AMDRyzen78840HS ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_OLEDTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_058_ThinkPadE14Gen6 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
+    :namaModel "Lenovo ThinkPad E14 Gen 6" ; :nomorModel "CAT-058" ; :tahunRilis 2025 ;
+    :harga 13900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_AMDRyzen77735U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_059_ThinkPadT14Gen5 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
+    :namaModel "Lenovo ThinkPad T14 Gen 5" ; :nomorModel "CAT-059" ; :tahunRilis 2026 ;
+    :harga 22900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155U ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_060_ThinkPadX1CarbonGen12 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "Lenovo ThinkPad X1 Carbon Gen 12" ; :nomorModel "CAT-060" ; :tahunRilis 2023 ;
+    :harga 32900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155U ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_061_LegionSlim516 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "Lenovo Legion Slim 5 16" ; :nomorModel "CAT-061" ; :tahunRilis 2024 ;
+    :harga 20900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_AMDRyzen78845HS ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_062_LegionPro5i rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "Lenovo Legion Pro 5i" ; :nomorModel "CAT-062" ; :tahunRilis 2025 ;
+    :harga 27900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_063_LOQ15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "Lenovo LOQ 15" ; :nomorModel "CAT-063" ; :tahunRilis 2026 ;
+    :harga 13900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCorei513450HX ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_064_ThinkPadP1Gen7 rdf:type owl:NamedIndividual, :Laptop, :WorkstationLaptop ;
+    :namaModel "Lenovo ThinkPad P1 Gen 7" ; :nomorModel "CAT-064" ; :tahunRilis 2023 ;
+    :harga 42900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_64GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED4K ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_065_Modern14C13M rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
+    :namaModel "MSI Modern 14 C13M" ; :nomorModel "CAT-065" ; :tahunRilis 2024 ;
+    :harga 7900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei51335U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_066_Prestige13AIEvo rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
+    :namaModel "MSI Prestige 13 AI Evo" ; :nomorModel "CAT-066" ; :tahunRilis 2025 ;
+    :harga 18900000.0 ; :beratKg 1.86 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_067_Prestige16AIStudio rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "MSI Prestige 16 AI Studio" ; :nomorModel "CAT-067" ; :tahunRilis 2026 ;
+    :harga 25900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED4K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_068_Thin15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "MSI Thin 15" ; :nomorModel "CAT-068" ; :tahunRilis 2023 ;
+    :harga 11900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei713620H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_069_Katana15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "MSI Katana 15" ; :nomorModel "CAT-069" ; :tahunRilis 2024 ;
+    :harga 17900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei713620H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_070_Cyborg15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "MSI Cyborg 15" ; :nomorModel "CAT-070" ; :tahunRilis 2025 ;
+    :harga 14900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei713620H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_071_Vector16HX rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "MSI Vector 16 HX" ; :nomorModel "CAT-071" ; :tahunRilis 2026 ;
+    :harga 32900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_072_RaiderGE78HX rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop, :GamingLaptop ;
+    :namaModel "MSI Raider GE78 HX" ; :nomorModel "CAT-072" ; :tahunRilis 2023 ;
+    :harga 49900000.0 ; :beratKg 2.05 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_073_CreatorZ17HXStudio rdf:type owl:NamedIndividual, :Laptop, :WorkstationLaptop ;
+    :namaModel "MSI Creator Z17 HX Studio" ; :nomorModel "CAT-073" ; :tahunRilis 2024 ;
+    :harga 42900000.0 ; :beratKg 2.05 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
+    :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei913980HX ; :memilikiRAM :RAM_64GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDTouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_074_SurfaceLaptopGo3 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
+    :namaModel "Microsoft Surface Laptop Go 3" ; :nomorModel "CAT-074" ; :tahunRilis 2025 ;
+    :harga 10900000.0 ; :beratKg 1.82 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :microsoftBrand ; :memilikiProcessor :CPU_IntelCorei51235U ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_256GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_PixelSense ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_075_SurfaceLaptop6135 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
+    :namaModel "Microsoft Surface Laptop 6 13.5" ; :nomorModel "CAT-075" ; :tahunRilis 2026 ;
+    :harga 21900000.0 ; :beratKg 1.88 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
+    :diproduksiOleh :microsoftBrand ; :memilikiProcessor :CPU_IntelCoreUltra5135H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_PixelSenseTouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_076_SurfaceLaptop615 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
+    :namaModel "Microsoft Surface Laptop 6 15" ; :nomorModel "CAT-076" ; :tahunRilis 2023 ;
+    :harga 25900000.0 ; :beratKg 1.95 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
+    :diproduksiOleh :microsoftBrand ; :memilikiProcessor :CPU_IntelCoreUltra7165H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_PixelSenseTouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_077_SurfaceLaptop7138 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "Microsoft Surface Laptop 7 13.8" ; :nomorModel "CAT-077" ; :tahunRilis 2024 ;
+    :harga 21900000.0 ; :beratKg 1.89 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
+    :diproduksiOleh :microsoftBrand ; :memilikiProcessor :CPU_QualcommSnapdragonXPlus ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_QualcommGPU ; :memilikiDisplay :DISPLAY_PixelSenseTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_078_SurfaceLaptop715 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "Microsoft Surface Laptop 7 15" ; :nomorModel "CAT-078" ; :tahunRilis 2025 ;
+    :harga 25900000.0 ; :beratKg 1.95 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
+    :diproduksiOleh :microsoftBrand ; :memilikiProcessor :CPU_QualcommSnapdragonXElite ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_QualcommGPU ; :memilikiDisplay :DISPLAY_PixelSenseTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_079_SurfacePro10 rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
+    :namaModel "Microsoft Surface Pro 10" ; :nomorModel "CAT-079" ; :tahunRilis 2026 ;
+    :harga 23900000.0 ; :beratKg 1.85 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
+    :diproduksiOleh :microsoftBrand ; :memilikiProcessor :CPU_IntelCoreUltra7165U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_PixelSenseTouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_080_VivobookS14OLED rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
+    :namaModel "ASUS Vivobook S 14 OLED" ; :nomorModel "CAT-080" ; :tahunRilis 2023 ;
+    :harga 15900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_081_ROGFlowX13 rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
+    :namaModel "ASUS ROG Flow X13" ; :nomorModel "CAT-081" ; :tahunRilis 2024 ;
+    :harga 24900000.0 ; :beratKg 1.87 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_AMDRyzen97940HS ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_082_AspireVero16 rdf:type owl:NamedIndividual, :Laptop, :MidRangeLaptop ;
+    :namaModel "Acer Aspire Vero 16" ; :nomorModel "CAT-082" ; :tahunRilis 2025 ;
+    :harga 11900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCoreUltra5125U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_083_PredatorHelios18 rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop, :GamingLaptop ;
+    :namaModel "Acer Predator Helios 18" ; :nomorModel "CAT-083" ; :tahunRilis 2026 ;
+    :harga 44900000.0 ; :beratKg 2.10 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_084_Vostro3530 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
+    :namaModel "Dell Vostro 3530" ; :nomorModel "CAT-084" ; :tahunRilis 2023 ;
+    :harga 9900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCorei51335U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_085_Precision5690 rdf:type owl:NamedIndividual, :Laptop, :WorkstationLaptop ;
+    :namaModel "Dell Precision 5690" ; :nomorModel "CAT-085" ; :tahunRilis 2024 ;
+    :harga 49900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_64GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED4K ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_086_DragonflyG4 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "HP Dragonfly G4" ; :nomorModel "CAT-086" ; :tahunRilis 2025 ;
+    :harga 28900000.0 ; :beratKg 1.88 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
+    :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCorei71365U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGATouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_087_OmenTranscend14 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
+    :namaModel "HP Omen Transcend 14" ; :nomorModel "CAT-087" ; :tahunRilis 2026 ;
+    :harga 29900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_088_V14G4 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
+    :namaModel "Lenovo V14 G4" ; :nomorModel "CAT-088" ; :tahunRilis 2023 ;
+    :harga 6900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_AMDRyzen57520U ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_089_ThinkBook14Gen7 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
+    :namaModel "Lenovo ThinkBook 14 Gen 7" ; :nomorModel "CAT-089" ; :tahunRilis 2024 ;
+    :harga 12900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCoreUltra5125U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_090_YogaPro9i16 rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop ;
+    :namaModel "Lenovo Yoga Pro 9i 16" ; :nomorModel "CAT-090" ; :tahunRilis 2025 ;
+    :harga 35900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_MiniLED32K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_091_SummitE13AIEvo rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
+    :namaModel "MSI Summit E13 AI Evo" ; :nomorModel "CAT-091" ; :tahunRilis 2026 ;
+    :harga 19900000.0 ; :beratKg 1.86 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
+    :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_QHDTouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_092_Titan18HX rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop, :GamingLaptop ;
+    :namaModel "MSI Titan 18 HX" ; :nomorModel "CAT-092" ; :tahunRilis 2023 ;
+    :harga 69900000.0 ; :beratKg 2.10 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_64GB_DDR5 ; :memilikiStorage :SSD_4096GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_MiniLED4K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_093_ChromebookCX1 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
+    :namaModel "ASUS Chromebook CX1" ; :nomorModel "CAT-093" ; :tahunRilis 2024 ;
+    :harga 4500000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCeleronN4500 ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_128GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_ChromeOS ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_ChromeOS .
+ :Laptop_094_ChromebookPlus514 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
+    :namaModel "Acer Chromebook Plus 514" ; :nomorModel "CAT-094" ; :tahunRilis 2025 ;
+    :harga 6200000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCorei3N305 ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_256GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_ChromeOS ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_ChromeOS .
+ :Laptop_095_Chromebookx36014 rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
+    :namaModel "HP Chromebook x360 14" ; :nomorModel "CAT-095" ; :tahunRilis 2026 ;
+    :harga 7900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
+    :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCorei3N305 ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_256GB ;
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDTouch ; :memilikiOperatingSystem :OS_ChromeOS ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_ChromeOS .
+ :Laptop_096_ChromebookDuet5 rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
+    :namaModel "Lenovo Chromebook Duet 5" ; :nomorModel "CAT-096" ; :tahunRilis 2023 ;
+    :harga 8500000.0 ; :beratKg 1.86 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_QualcommSnapdragon7cGen2 ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_256GB ;
+    :memilikiGPU :GPU_QualcommGPU ; :memilikiDisplay :DISPLAY_OLEDTouch ; :memilikiOperatingSystem :OS_ChromeOS ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_ChromeOS .
+ :Laptop_097_Precision7680 rdf:type owl:NamedIndividual, :Laptop, :WorkstationLaptop ;
+    :namaModel "Dell Precision 7680" ; :nomorModel "CAT-097" ; :tahunRilis 2024 ;
+    :harga 53900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCorei913950HX ; :memilikiRAM :RAM_64GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_UHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro .
+ :Laptop_098_MacBookPro16M4Pro rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
+    :namaModel "Apple MacBook Pro 16 M4 Pro" ; :nomorModel "CAT-098" ; :tahunRilis 2025 ;
+    :harga 45900000.0 ; :beratKg 2.01 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM4Pro ; :memilikiRAM :RAM_24GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS .
+ :Laptop_099_Legion9i rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop, :GamingLaptop ;
+    :namaModel "Lenovo Legion 9i" ; :nomorModel "CAT-099" ; :tahunRilis 2026 ;
+    :harga 59900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_64GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_MiniLED32K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home .
+ :Laptop_100_ROGStrixSCAR18 rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop, :GamingLaptop ;
+    :namaModel "ASUS ROG Strix SCAR 18" ; :nomorModel "CAT-100" ; :tahunRilis 2023 ;
+    :harga 62900000.0 ; :beratKg 2.10 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
+    :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_MiniLEDQHD ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home .
+
+# Lengkapi individu laptop contoh yang sudah ada pada ontologi asli.
+:AsusTUFGaming :namaModel "ASUS TUF Gaming (existing ontology individual)" ;
+    :nomorModel "ASUS-TUF-ORIGINAL" ;
+    :tahunRilis 2025 ;
+    :diproduksiOleh :asusBrand ;
+    :memilikiProcessor :IntelCoreI9 ;
+    :memilikiRAM :RAM_16GB_DDR5 ;
+    :memilikiStorage :SSD_1024GB ;
+    :memilikiGPU :GPU_GeForceRTX ;
+    :memilikiDisplay :DISPLAY_FHDIPS ;
+    :memilikiOperatingSystem :OS_Windows11Home ;
+    :memilikiPriceRange :range_GamingLaptop ;
+    :kompatibelDengan :OS_Windows11Home .
+
+
+#################################################################
+#    SKEMA & DEFINISI SINONIM SEMANTIK (ONTOLOGI LAPTOP)
+#    Mendukung Semantic Search berbasis sinonim bahasa Indonesia,
+#    bahasa Inggris, akronim/singkatan, dan istilah populer.
+#################################################################
+
+skos:altLabel rdf:type owl:AnnotationProperty ;
+    rdfs:label "label alternatif / sinonim"@id , "alternative label"@en .
+
+skos:prefLabel rdf:type owl:AnnotationProperty ;
+    rdfs:label "label utama"@id , "preferred label"@en .
+
+:memilikiSinonim rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf skos:altLabel ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:string ;
+    rdfs:label "memiliki sinonim"@id , "has synonym"@en .
+
+:kataKunciPencarian rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf :memilikiSinonim ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:string ;
+    rdfs:label "kata kunci pencarian"@id .
+
+# --- Kelas Ekuivalen (OWL Equivalent Classes) ---
+:Notebook rdf:type owl:Class ; owl:equivalentClass :Laptop ; rdfs:label "Notebook"@en .
+:KomputerJinjing rdf:type owl:Class ; owl:equivalentClass :Laptop ; rdfs:label "Komputer Jinjing"@id .
+:CPU rdf:type owl:Class ; owl:equivalentClass :Processor ; rdfs:label "CPU"@en .
+:Prosesor rdf:type owl:Class ; owl:equivalentClass :Processor ; rdfs:label "Prosesor"@id .
+:GPU rdf:type owl:Class ; owl:equivalentClass :GraphicsCard ; rdfs:label "GPU"@en .
+:VGA rdf:type owl:Class ; owl:equivalentClass :GraphicsCard ; rdfs:label "VGA"@en .
+:KartuGrafis rdf:type owl:Class ; owl:equivalentClass :GraphicsCard ; rdfs:label "Kartu Grafis"@id .
+:MemoriUtama rdf:type owl:Class ; owl:equivalentClass :RAM ; rdfs:label "Memori Utama"@id .
+:MediaPenyimpanan rdf:type owl:Class ; owl:equivalentClass :Storage ; rdfs:label "Media Penyimpanan"@id .
+:Layar rdf:type owl:Class ; owl:equivalentClass :Display ; rdfs:label "Layar"@id .
+:SistemOperasi rdf:type owl:Class ; owl:equivalentClass :OperatingSystem ; rdfs:label "Sistem Operasi"@id .
+:Merek rdf:type owl:Class ; owl:equivalentClass :Brand ; rdfs:label "Merek"@id .
+:RentangHarga rdf:type owl:Class ; owl:equivalentClass :PriceRange ; rdfs:label "Rentang Harga"@id .
+
+# --- Sinonim pada Kelas Utama & Kategori Laptop ---
+:Laptop :memilikiSinonim "laptop, notebook, komputer jinjing, komputer portabel, portable computer, perangkat komputasi" ;
+    skos:altLabel "Notebook"@en , "Komputer Jinjing"@id .
+
+:GamingLaptop :memilikiSinonim "laptop gaming, laptop game, laptop permainan, gaming notebook, esports, laptop gamer" ;
+    skos:altLabel "Laptop Gaming"@id , "Laptop Permainan"@id , "Gaming Notebook"@en .
+
+:BusinessLaptop :memilikiSinonim "laptop bisnis, laptop kerja, laptop kantor, laptop kantoran, office laptop, enterprise laptop, korporat, produktivitas, bisnis" ;
+    skos:altLabel "Laptop Bisnis"@id , "Laptop Kantoran"@id , "Office Laptop"@en .
+
+:Ultrabook :memilikiSinonim "ultrabook, laptop tipis, laptop ringan, thin and light, slim laptop, portable, mobilitas tinggi, compact laptop" ;
+    skos:altLabel "Laptop Tipis & Ringan"@id , "Slim Notebook"@en .
+
+:TwoInOneLaptop :memilikiSinonim "2-in-1, two in one, laptop lipat, convertible, hybrid laptop, laptop tablet, 360 derajat, x360, flip, layar sentuh, touchscreen" ;
+    skos:altLabel "Laptop 2-in-1"@id , "Laptop Lipat Convertible"@id .
+
+:WorkstationLaptop :memilikiSinonim "workstation, mobile workstation, laptop render, laptop editing, laptop kreator, content creator, arsitektur, 3d rendering, desain grafis, cad, studio, profesional" ;
+    skos:altLabel "Laptop Workstation"@id , "Laptop Kreator & Render"@id .
+
+:BudgetLaptop :memilikiSinonim "budget, laptop murah, terjangkau, ekonomis, entry level, entry-level, hemat, harga rendah" ;
+    skos:altLabel "Laptop Ekonomis"@id , "Entry-Level Laptop"@en , "Laptop Pelajar"@id .
+
+:MidRangeLaptop :memilikiSinonim "mid-range, midrange, menengah, kelas menengah, mainstream, standar, menengah ke atas" ;
+    skos:altLabel "Laptop Kelas Menengah"@id , "Mainstream Laptop"@en .
+
+:PremiumLaptop :memilikiSinonim "premium, kelas atas, flagship, mewah, eksekutif, profesional, kualitas tinggi" ;
+    skos:altLabel "Laptop Premium"@id , "Flagship Laptop"@en .
+
+:HighEndLaptop :memilikiSinonim "high-end, highend, tertinggi, sultan, monster, ekstrem, ultra high end, flagship tertinggi" ;
+    skos:altLabel "Laptop High-End"@id , "Ultra High-End"@en .
+
+# --- Sinonim pada Kelas Komponen Hardware ---
+:Component :memilikiSinonim "komponen, perangkat keras, hardware, suku cadang, spesifikasi internal" .
+:Brand :memilikiSinonim "brand, merek, merk, pabrikan, produsen, vendor, manufaktur, manufacturer" .
+:PriceRange :memilikiSinonim "rentang harga, kelas harga, kategori harga, segmen pasar, budget range" .
+
+:Processor :memilikiSinonim "processor, prosesor, cpu, central processing unit, otak komputer, chip, soc, dapur pacu" .
+:IntelProcessor :memilikiSinonim "intel, prosesor intel, cpu intel, team blue, chip intel, x86" .
+:IntelCore :memilikiSinonim "intel core, core series, core i, i3, i5, i7, i9, raptor lake, alder lake" .
+:IntelCoreUltra :memilikiSinonim "intel core ultra, core ultra, meteor lake, lunar lake, ai pc, prosesor ai, npu intel" .
+:IntelXeon :memilikiSinonim "intel xeon, xeon, server cpu, workstation cpu" .
+:AMDProcessor :memilikiSinonim "amd, prosesor amd, cpu amd, ryzen, team red, zen" .
+:Ryzen3 :memilikiSinonim "ryzen 3, r3, amd ryzen 3, entry ryzen" .
+:Ryzen5 :memilikiSinonim "ryzen 5, r5, amd ryzen 5, mainstream ryzen" .
+:Ryzen7 :memilikiSinonim "ryzen 7, r7, amd ryzen 7, high performance ryzen" .
+:Ryzen9 :memilikiSinonim "ryzen 9, r9, amd ryzen 9, enthusiast ryzen" .
+:RyzenAI :memilikiSinonim "ryzen ai, amd ai, npu amd, xdna" .
+:AppleSilicon :memilikiSinonim "apple silicon, apple chip, m-series, arm mac, soc apple, prosesor macbook" .
+:M1 :memilikiSinonim "apple m1, chip m1" .
+:M2 :memilikiSinonim "apple m2, chip m2" .
+:M3 :memilikiSinonim "apple m3, chip m3" .
+:M4 :memilikiSinonim "apple m4, chip m4" .
+:M5 :memilikiSinonim "apple m5, chip m5" .
+:QualcommProcessor :memilikiSinonim "qualcomm, snapdragon, arm windows, copilot+ pc, prosesor arm" .
+:SnapdragonX :memilikiSinonim "snapdragon x, snapdragon x elite, snapdragon x plus, qualcomm ai" .
+
+:Memory :memilikiSinonim "memory, memori, penyimpanan sementara, volatile memory" .
+:RAM :memilikiSinonim "ram, random access memory, memori ram, memori utama, kapasitas memori" .
+:DDR4RAM :memilikiSinonim "ddr4, ram ddr4, double data rate 4, pc4" .
+:DDR5RAM :memilikiSinonim "ddr5, ram ddr5, double data rate 5, pc5, ram cepat, generasi ke-5" .
+:LPDDR5RAM :memilikiSinonim "lpddr5, low power ddr5, ram hemat daya, onboard ram" .
+
+:Storage :memilikiSinonim "storage, penyimpanan, media penyimpanan, disk, drive, kapasitas penyimpanan, rom, memori internal" .
+:SSD :memilikiSinonim "ssd, solid state drive, solid-state drive, flash storage, penyimpanan cepat, non-mekanik" .
+:NVMeSSD :memilikiSinonim "nvme, nvme ssd, m.2 nvme, pcie ssd, ssd m2, non-volatile memory express" .
+:SATA_SSD :memilikiSinonim "sata ssd, ssd sata, m.2 sata, 2.5 inch ssd" .
+:HDD :memilikiSinonim "hdd, hard disk, hard drive, harddisk, hard disk drive, piringan cakram, penyimpanan magnetik" .
+
+:GraphicsCard :memilikiSinonim "graphics card, kartu grafis, gpu, vga, video card, pengolah grafis, display adapter, kartu video" .
+:DedicatedGPU :memilikiSinonim "dedicated gpu, discrete gpu, vga dedicated, gpu diskrit, kartu grafis mandiri, vga pisah, dgpu, grafis terpisah" .
+:IntegratedGPU :memilikiSinonim "integrated gpu, igpu, vga onboard, grafis terintegrasi, grafis bawaan, shared gpu, uma, vga menyatu" .
+:NVIDIA :memilikiSinonim "nvidia, geforce, team green, gpu nvidia, vga nvidia, cuda" .
+:GeForceRTX :memilikiSinonim "geforce rtx, rtx, nvidia rtx, ray tracing, dlss, tensor core, gpu gaming, vga gaming" .
+:GeForceGTX :memilikiSinonim "geforce gtx, gtx, nvidia gtx" .
+:AMDGPU :memilikiSinonim "amd gpu, radeon дискrit, vga amd" .
+:Radeon :memilikiSinonim "amd radeon, radeon rx, gpu radeon" .
+:IntelGraphics :memilikiSinonim "intel graphics, intel iris xe, intel uhd, intel arc graphics, vga intel, igpu intel, grafis terintegrasi intel" .
+:AMDIntegratedGraphics :memilikiSinonim "amd integrated graphics, amd radeon graphics, radeon 610m, radeon 780m, igpu amd, vga onboard amd" .
+:AppleIntegratedGraphics :memilikiSinonim "apple gpu, grafis apple, m-series gpu, unified gpu, igpu macbook" .
+
+:Display :memilikiSinonim "display, layar, monitor, screen, panel layar, visual" .
+:FullHDDisplay :memilikiSinonim "full hd, fhd, 1080p, 1920x1080, wuxga, 1920x1200, resolusi tinggi" .
+:HDDisplay :memilikiSinonim "hd, 720p, 1366x768" .
+:QHDDisplay :memilikiSinonim "qhd, quad hd, 2k, 1440p, wqxga, 2560x1440, 2560x1600, 2.8k, 3k, 3.2k" .
+:UHDDisplay :memilikiSinonim "uhd, ultra hd, 4k, 2160p, 3840x2160, 3840x2400" .
+:OLEDDisplay :memilikiSinonim "oled, layar oled, amoled, organic led, warna akurat, kontras tinggi, pantone validated" .
+:IPSDisplay :memilikiSinonim "ips, in-plane switching, layar ips, sudut pandang luas" .
+:TouchscreenDisplay :memilikiSinonim "touchscreen, layar sentuh, touch display, multi-touch, stylus support" .
+
+:OperatingSystem :memilikiSinonim "operating system, sistem operasi, os, platform, perangkat lunak sistem" .
+:Windows :memilikiSinonim "windows, microsoft windows, win, os windows, jendela" .
+:Windows10 :memilikiSinonim "windows 10, win 10, win10" .
+:Windows11 :memilikiSinonim "windows 11, win 11, win11, windows terbaru" .
+:macOS :memilikiSinonim "macos, mac os, osx, os x, sistem operasi apple, macintosh, sonoma, sequoia, ventura" .
+:Linux :memilikiSinonim "linux, gnu/linux, open source os, ubuntu, fedora, debian" .
+:ChromeOS :memilikiSinonim "chromeos, chrome os, google os, chromebook os, cloud os" .
+
+# --- Sinonim pada Individu Brand (Merek) ---
+:asusBrand :memilikiSinonim "asus, asustek, asus tek, brand taiwan" .
+:appleBrand :memilikiSinonim "apple, mac, macbook, macbook air, macbook pro, apple inc, cupertino" .
+:acerBrand :memilikiSinonim "acer, predator, helios, triton, nitro, swift, aspire, travelmate, brand taiwan" .
+:dellBrand :memilikiSinonim "dell, alienware, xps, inspiron, latitude, precision, vostro, dell technologies" .
+:hpBrand :memilikiSinonim "hp, hewlett-packard, hewlett packard, omen, victus, spectre, envy, pavilion, elitebook, probook, zbook, omnibook, dragonfly" .
+:lenovoBrand :memilikiSinonim "lenovo, thinkpad, ideapad, legion, yoga, loq, thinkbook" .
+:msiBrand :memilikiSinonim "msi, micro-star international, microstar, katana, cyborg, raider, titan, vector, thin, prestige, creator, summit, modern" .
+:microsoftBrand :memilikiSinonim "microsoft, surface, microsoft surface, surface pro, surface laptop" .
+
+# --- Sinonim pada Individu PriceRange (Rentang Harga & Kategori) ---
+:range_BudgetLaptop :memilikiSinonim "budget, murah, ekonomis, terjangkau, entry-level, hemat, harga rendah, di bawah 8 juta" .
+:range_MidRangeLaptop :memilikiSinonim "mid-range, menengah, mainstream, standar, 8 sampai 15 juta, kerja harian" .
+:range_PremiumLaptop :memilikiSinonim "premium, kelas atas, flagship, eksekutif, profesional, mewah" .
+:range_HighEndLaptop :memilikiSinonim "high-end, sultan, monster, ekstrem, tertinggi, flagship ultra" .
+:range_GamingLaptop :memilikiSinonim "gaming, game, permainan, esports, gamer, rtx, performa tinggi, grafis berat" .
+:range_BusinessLaptop :memilikiSinonim "business, bisnis, kantor, kantoran, kerja, office, korporat, enterprise, produktivitas, komersial" .
+:range_Ultrabook :memilikiSinonim "ultrabook, tipis, ringan, slim, portable, mobilitas, compact, baterai awet" .
+:range_TwoInOneLaptop :memilikiSinonim "2-in-1, two in one, lipat, convertible, hybrid, tablet, 360, layar sentuh, touchscreen, stylus" .
+:range_WorkstationLaptop :memilikiSinonim "workstation, render, editing, kreator, desain, arsitek, cad, 3d, studio, teknik, engineering" .
+:highEndRange :memilikiSinonim "high-end, kelas atas, mewah, 20 sampai 30 juta" .
+:premiumRange :memilikiSinonim "premium, flagship, sultan, di atas 30 juta" .
+
+# --- Sinonim pada Individu GPU (Kartu Grafis) ---
+:GPU_GeForceRTX :memilikiSinonim "nvidia geforce rtx, rtx, vga dedicated, dedicated gpu, gpu diskrit, kartu grafis mandiri, ray tracing, dlss, cuda, video card gaming, vga nvidia" .
+:RTX4070Laptop :memilikiSinonim "rtx 4070, geforce rtx 4070, nvidia 4070, vga dedicated, gpu diskrit, kartu grafis gaming, ray tracing" .
+:RTX5090 :memilikiSinonim "rtx 5090, geforce rtx 5090, vga dedicated, gpu diskrit" .
+:GPU_IntelGraphics :memilikiSinonim "intel graphics, intel iris xe, intel arc, intel uhd, igpu intel, vga onboard, grafis terintegrasi, shared gpu, hemat daya" .
+:GPU_AMDIntegratedGraphics :memilikiSinonim "amd integrated graphics, amd radeon graphics, radeon igpu, vga onboard amd, grafis terintegrasi amd, shared gpu" .
+:GPU_AppleIntegratedGraphics :memilikiSinonim "apple integrated graphics, apple gpu, m-series gpu, grafis terintegrasi apple, unified gpu, vga mac" .
+:AppleM3MaxGPU :memilikiSinonim "apple m3 max gpu, grafis m3 max, apple gpu" .
+:GPU_QualcommGPU :memilikiSinonim "qualcomm adreno, adreno gpu, snapdragon gpu, grafis arm, igpu qualcomm, vga onboard" .
+
+# --- Sinonim pada Individu RAM (Memori) ---
+:RAM_8GB_DDR4 :memilikiSinonim "ram 8gb, memori 8gb, 8 gb, ddr4, ram standar, 8gb ddr4" .
+:RAM_16GB_DDR5 :memilikiSinonim "ram 16gb, memori 16gb, 16 gb, ddr5, multitasking, 16gb ddr5" .
+:ROGRAM16GB :memilikiSinonim "ram 16gb, memori 16gb, 16 gb, ddr5" .
+:RAM_18GB_DDR5 :memilikiSinonim "ram 18gb, memori 18gb, 18 gb, unified memory 18gb, ram macbook pro" .
+:RAM_24GB_DDR5 :memilikiSinonim "ram 24gb, memori 24gb, 24 gb, unified memory 24gb, ram besar" .
+:RAM_32GB_DDR5 :memilikiSinonim "ram 32gb, memori 32gb, 32 gb, ddr5, ram besar, heavy multitasking, 32gb ddr5" .
+:RAM_36GB_DDR5 :memilikiSinonim "ram 36gb, memori 36gb, 36 gb, unified memory 36gb" .
+:RAM_64GB_DDR5 :memilikiSinonim "ram 64gb, memori 64gb, 64 gb, ddr5, ram monster, ram workstation, kapasitas maksimal" .
+
+# --- Sinonim pada Individu Storage (Media Penyimpanan) ---
+:SSD_128GB :memilikiSinonim "ssd 128gb, 128 gb, solid state drive 128gb, nvme, m.2, penyimpanan dasar" .
+:SSD_256GB :memilikiSinonim "ssd 256gb, 256 gb, solid state drive 256gb, nvme, m.2, seperempat tera" .
+:SSD_512GB :memilikiSinonim "ssd 512gb, 512 gb, solid state drive 512gb, setengah tera, 0.5 tb, 0.5tb, nvme, m.2, pcie" .
+:SSD_1024GB :memilikiSinonim "ssd 1tb, 1 tb, 1 terabyte, 1000gb, 1000 gb, 1024gb, 1024 gb, satu tera, solid state drive 1tb, nvme, m.2, pcie" .
+:MacBookSSD1TB :memilikiSinonim "ssd 1tb, 1 tb, 1 terabyte, 1024gb, satu tera, nvme" .
+:ROGSSD1TB :memilikiSinonim "ssd 1tb, 1 tb, 1 terabyte, 1024gb, satu tera, nvme" .
+:SSD_2048GB :memilikiSinonim "ssd 2tb, 2 tb, 2 terabyte, 2000gb, 2000 gb, 2048gb, 2048 gb, dua tera, solid state drive 2tb, nvme, m.2, kapasitas besar" .
+:SSD_4096GB :memilikiSinonim "ssd 4tb, 4 tb, 4 terabyte, 4000gb, 4000 gb, 4096gb, 4096 gb, empat tera, solid state drive 4tb, nvme, penyimpanan raksasa" .
+
+# --- Sinonim pada Individu Display (Layar) ---
+:DISPLAY_FHDIPS :memilikiSinonim "fhd, full hd, 1080p, 1920x1080, layar ips, 14 inch, anti-glare" .
+:DISPLAY_WUXGAIPS :memilikiSinonim "wuxga, 1920x1200, fhd+, 16:10, layar ips, full hd plus" .
+:DISPLAY_22KIPS :memilikiSinonim "2.2k, 2240x1400, layar ips, resolusi tinggi, 2k" .
+:DISPLAY_QHDIPS :memilikiSinonim "qhd, quad hd, 2k, 1440p, 2560x1440, 2560x1600, wqxga, 144hz, layar gaming, ips" .
+:DISPLAY_UHDIPS :memilikiSinonim "uhd, 4k, ultra hd, 3840x2160, 2160p, layar 4k ips, resolusi ultra" .
+:DISPLAY_OLED28K :memilikiSinonim "oled, amoled, 2.8k, 2880x1800, layar oled, warna akurat, dci-p3, kontras tinggi" .
+:DISPLAY_OLED3K :memilikiSinonim "oled 3k, amoled, 3k, 2880x1800, layar oled tajam" .
+:DISPLAY_OLED32K :memilikiSinonim "oled 3.2k, amoled, 3.2k, 3200x2000, layar kreator" .
+:DISPLAY_OLEDQHD :memilikiSinonim "oled qhd, amoled 2k, 144hz oled, layar gaming oled, 1440p oled" .
+:DISPLAY_OLED4K :memilikiSinonim "oled 4k, amoled 4k, uhd oled, 3840x2400, layar profesional kreator" .
+:DISPLAY_MiniLED32K :memilikiSinonim "mini-led, miniled, 3.2k, hdr1000, layar terang, kreator" .
+:DISPLAY_MiniLEDQHD :memilikiSinonim "mini-led qhd, miniled 2k, layar flagship, hdr" .
+:DISPLAY_MiniLED4K :memilikiSinonim "mini-led 4k, miniled uhd, 18 inch, layar raksasa, hdr" .
+:DISPLAY_LiquidRetina :memilikiSinonim "liquid retina, retina display, layar macbook air, ips retina, true tone" .
+:DISPLAY_LiquidRetinaXDR :memilikiSinonim "liquid retina xdr, mini-led macbook pro, xdr display, promotion 120hz, retina" .
+:DISPLAY_PixelSense :memilikiSinonim "pixelsense, layar surface, 3:2 aspect ratio" .
+:DISPLAY_PixelSenseTouch :memilikiSinonim "pixelsense touch, layar sentuh surface, touchscreen, stylus, surface pen, 3:2" .
+:DISPLAY_FHDTouch :memilikiSinonim "fhd touch, full hd touchscreen, layar sentuh 1080p, 2-in-1 screen, stylus" .
+:DISPLAY_WUXGATouch :memilikiSinonim "wuxga touch, fhd+ touchscreen, layar sentuh 16:10, bisnis interaktif" .
+:DISPLAY_QHDTouch :memilikiSinonim "qhd touch, 2k touchscreen, layar sentuh resolusi tinggi, stylus" .
+:DISPLAY_OLEDTouch :memilikiSinonim "oled touch, amoled touchscreen, layar sentuh oled, 2-in-1 oled" .
+:DISPLAY_OLED28KTouch :memilikiSinonim "oled 2.8k touch, amoled touchscreen, layar sentuh premium" .
+
+# --- Sinonim pada Individu OperatingSystem (Sistem Operasi) ---
+:OS_Windows11Home :memilikiSinonim "windows 11 home, win 11, win11, microsoft windows, os windows, jendela" .
+:OS_Windows11Pro :memilikiSinonim "windows 11 pro, win 11 pro, win11 professional, windows bisnis, bitlocker, microsoft windows" .
+:Windows11OS :memilikiSinonim "windows 11, win 11, win11, microsoft windows" .
+:OS_macOS :memilikiSinonim "macos, mac os, osx, os x, apple os, macintosh, sonoma, sequoia" .
+:macOSSonoma :memilikiSinonim "macos sonoma, mac os, osx, apple os" .
+:OS_ChromeOS :memilikiSinonim "chromeos, chrome os, google os, chromebook, cloud os" .
+
+# --- Sinonim pada Individu Processor (CPU) ---
+:CPU_IntelCeleronN4500 :memilikiSinonim "celeron, intel celeron, n4500, prosesor hemat, cpu dasar, entry cpu" .
+:CPU_IntelCorei31315U :memilikiSinonim "core i3, i3, i3 gen 13, 1315u, intel i3, raptor lake" .
+:CPU_IntelCorei3N305 :memilikiSinonim "core i3 n305, i3, n305, alder lake-n, 8-core i3" .
+:CPU_IntelCorei51235U :memilikiSinonim "core i5, i5, i5 gen 12, 1235u, alder lake, intel i5" .
+:CPU_IntelCorei51334U :memilikiSinonim "core i5, i5, i5 gen 13, 1334u, raptor lake, intel i5" .
+:CPU_IntelCorei51335U :memilikiSinonim "core i5, i5, i5 gen 13, 1335u, raptor lake, intel i5, hemat daya" .
+:CPU_IntelCorei513420H :memilikiSinonim "core i5, i5, i5 h-series, 13420h, intel i5 gaming, performa tinggi" .
+:CPU_IntelCorei513450HX :memilikiSinonim "core i5 hx, i5, 13450hx, intel i5 gaming, hx series" .
+:CPU_IntelCorei71360P :memilikiSinonim "core i7, i7, 1360p, i7 evo, intel i7 gen 13" .
+:CPU_IntelCorei71365U :memilikiSinonim "core i7, i7, 1365u, i7 vpro, intel i7 bisnis" .
+:CPU_IntelCorei713620H :memilikiSinonim "core i7, i7, 13620h, i7 h-series, intel i7 gaming" .
+:CPU_IntelCorei713650HX :memilikiSinonim "core i7 hx, i7, 13650hx, intel i7 gaming" .
+:CPU_IntelCorei714700HX :memilikiSinonim "core i7 gen 14, i7, 14700hx, raptor lake refresh, cpu gaming" .
+:CPU_IntelCorei913950HX :memilikiSinonim "core i9, i9, 13950hx, i9 vpro, cpu workstation, 24 core" .
+:CPU_IntelCorei913980HX :memilikiSinonim "core i9, i9, 13980hx, cpu flagship, 24 core, prosesor monster" .
+:IntelCoreI9 :memilikiSinonim "core i9, i9, 13980hx, cpu flagship, 24 core" .
+:CPU_IntelCorei914900HX :memilikiSinonim "core i9 gen 14, i9, 14900hx, prosesor tercepat, cpu gaming monster, 24 core" .
+:CPU_IntelCoreUltra5125U :memilikiSinonim "core ultra 5, ultra 5, 125u, meteor lake, ai pc, npu intel" .
+:CPU_IntelCoreUltra5125H :memilikiSinonim "core ultra 5, ultra 5, 125h, meteor lake, ai pc, npu intel" .
+:CPU_IntelCoreUltra5135U :memilikiSinonim "core ultra 5, ultra 5, 135u, vpro, ai pc, npu intel" .
+:CPU_IntelCoreUltra5135H :memilikiSinonim "core ultra 5, ultra 5, 135h, vpro, ai pc, npu intel" .
+:CPU_IntelCoreUltra7155U :memilikiSinonim "core ultra 7, ultra 7, 155u, meteor lake, ai pc, npu intel" .
+:CPU_IntelCoreUltra7155H :memilikiSinonim "core ultra 7, ultra 7, 155h, meteor lake, ai pc, intel evo, npu" .
+:CPU_IntelCoreUltra7165U :memilikiSinonim "core ultra 7, ultra 7, 165u, vpro, ai pc, bisnis" .
+:CPU_IntelCoreUltra7165H :memilikiSinonim "core ultra 7, ultra 7, 165h, vpro, ai pc, performa" .
+:CPU_IntelCoreUltra7258V :memilikiSinonim "core ultra 7 series 2, lunar lake, 258v, copilot+ pc, ai pc" .
+:CPU_IntelCoreUltra9185H :memilikiSinonim "core ultra 9, ultra 9, 185h, flagship ai pc, meteor lake h" .
+:CPU_AMDRyzen37320U :memilikiSinonim "ryzen 3, r3, 7320u, amd ryzen, mendocino, hemat daya" .
+:CPU_AMDRyzen55625C :memilikiSinonim "ryzen 5, r5, 5625c, ryzen chromebook, zen 3" .
+:CPU_AMDRyzen57520U :memilikiSinonim "ryzen 5, r5, 7520u, amd ryzen, hemat daya" .
+:CPU_AMDRyzen57530U :memilikiSinonim "ryzen 5, r5, 7530u, barcelo, amd ryzen" .
+:CPU_AMDRyzen58645HS :memilikiSinonim "ryzen 5 hs, r5, 8645hs, hawk point, ryzen ai, cpu gaming amd" .
+:CPU_AMDRyzen77735U :memilikiSinonim "ryzen 7, r7, 7735u, rembrandt, amd ryzen 7" .
+:CPU_AMDRyzen78840U :memilikiSinonim "ryzen 7, r7, 8840u, hawk point, ryzen ai, tipis hemat daya" .
+:CPU_AMDRyzen78840HS :memilikiSinonim "ryzen 7, r7, 8840hs, hawk point, ryzen ai" .
+:CPU_AMDRyzen78845HS :memilikiSinonim "ryzen 7 hs, r7, 8845hs, hawk point, ryzen ai, cpu gaming" .
+:CPU_AMDRyzen97940HS :memilikiSinonim "ryzen 9, r9, 7940hs, phoenix, flagship amd" .
+:CPU_AMDRyzen98945HS :memilikiSinonim "ryzen 9, r9, 8945hs, hawk point, flagship ryzen ai" .
+:CPU_AppleM2 :memilikiSinonim "apple m2, m2, chip m2, apple silicon, arm mac" .
+:CPU_AppleM3 :memilikiSinonim "apple m3, m3, chip m3, apple silicon, 3nm, arm mac" .
+:CPU_AppleM3Pro :memilikiSinonim "apple m3 pro, m3 pro, chip m3 pro, apple silicon pro" .
+:AppleM3Max :memilikiSinonim "apple m3 max, m3 max, chip m3 max, apple silicon max" .
+:CPU_AppleM4 :memilikiSinonim "apple m4, m4, chip m4, apple silicon generasi ke-4, neural engine" .
+:CPU_AppleM4Pro :memilikiSinonim "apple m4 pro, m4 pro, chip m4 pro, workstation mac" .
+:CPU_AppleM4Max :memilikiSinonim "apple m4 max, m4 max, chip m4 max, flagship apple silicon" .
+:CPU_QualcommSnapdragon7cGen2 :memilikiSinonim "snapdragon 7c, qualcomm 7c, arm chromebook, hemat baterai" .
+:CPU_QualcommSnapdragonXPlus :memilikiSinonim "snapdragon x plus, qualcomm x plus, copilot+ pc, arm windows, npu 45 tops" .
+:CPU_QualcommSnapdragonXElite :memilikiSinonim "snapdragon x elite, qualcomm x elite, oryon cpu, copilot+ pc, arm windows, baterai tahan lama" .
+
+# --- Sinonim pada Object Properties & Datatype Properties ---
+:diproduksiOleh :memilikiSinonim "diproduksi oleh, buatan, merek, pabrikan, manufactured by, produced by, vendor" .
+:memproduksi :memilikiSinonim "memproduksi, membuat, mengeluarkan seri, produces" .
+:memilikiProcessor :memilikiSinonim "memiliki prosesor, memakai cpu, ditenagai prosesor, has processor, cpu" .
+:memilikiRAM :memilikiSinonim "memiliki ram, kapasitas memori, memakai ram, has ram, memory" .
+:memilikiStorage :memilikiSinonim "memiliki storage, media penyimpanan, memakai ssd, kapasitas penyimpanan, has storage" .
+:memilikiGPU :memilikiSinonim "memiliki gpu, memakai vga, kartu grafis, pengolah grafis, has gpu, vga" .
+:memilikiDisplay :memilikiSinonim "memiliki display, ukuran layar, panel layar, monitor, has display, screen" .
+:memilikiOperatingSystem :memilikiSinonim "memiliki sistem operasi, memakai os, sistem operasi bawaan, has operating system" .
+:memilikiPriceRange :memilikiSinonim "memiliki rentang harga, kategori harga, kelas laptop, segmen, has price range" .
+:harga :memilikiSinonim "harga, price, biaya, banderol, nilai rupiah, idr, rp" .
+:namaModel :memilikiSinonim "nama model, seri laptop, tipe laptop, nama produk, model name" .
+:namaBrand :memilikiSinonim "nama brand, nama merek, merk, brand name" .
+:namaProcessor :memilikiSinonim "nama prosesor, seri cpu, tipe prosesor, processor name" .
+:namaGPU :memilikiSinonim "nama gpu, seri vga, tipe kartu grafis, gpu name" .
+:namaOS :memilikiSinonim "nama os, sistem operasi, operating system name" .
+:kapasitasGB :memilikiSinonim "kapasitas ram gb, ukuran ram, besaran memori, ram capacity" .
+:kapasitasStorageGB :memilikiSinonim "kapasitas storage gb, ukuran ssd, penyimpanan internal, storage capacity" .
+:ukuranLayarInch :memilikiSinonim "ukuran layar inch, dimensi layar, bentang layar, screen size, inci" .
+:beratKg :memilikiSinonim "berat kg, bobot laptop, massa, weight" .
+:adalahTouchscreen :memilikiSinonim "adalah touchscreen, layar sentuh, touch screen" .
+:adalahDedicated :memilikiSinonim "adalah dedicated, vga pisah, gpu diskrit, dedicated graphics" .
+
+# --- Sinonim pada Individu Laptop Spesifik (Seri & Julukan Populer) ---
+:AsusTUFGaming :memilikiSinonim "asus tuf, laptop gaming militer, military grade gaming, tuf gaming" .
+:Laptop_001_VivobookGo14E1404 :memilikiSinonim "vivobook go 14, e1404, laptop kuliah murah, laptop pelajar asus, tipis ekonomis" .
+:Laptop_004_Zenbook14OLEDUX3405 :memilikiSinonim "zenbook 14 oled, ux3405, laptop oled tipis, ultrabook asus premium, intel evo" .
+:Laptop_006_ROGZephyrusG14 :memilikiSinonim "zephyrus g14, rog g14, laptop gaming tipis 14 inch, gaming kreator" .
+:Laptop_008_ROGStrixG16 :memilikiSinonim "rog strix g16, laptop esports asus, gaming rtx performa tinggi" .
+:Laptop_009_TUFGamingA15 :memilikiSinonim "tuf a15, asus tuf ryzen, laptop gaming tahan banting, military standard" .
+:Laptop_012_ProArtStudiobook16OLED :memilikiSinonim "proart studiobook, laptop desainer, laptop animator, kreator profesional, workstation oled" .
+:Laptop_013_MacBookAir13M2 :memilikiSinonim "macbook air m2, mba m2, laptop apple tipis, mac kuliah, macos" .
+:Laptop_014_MacBookAir13M3 :memilikiSinonim "macbook air m3, mba m3, laptop apple 13 inch, macos" .
+:Laptop_018_MacBookPro14M3 :memilikiSinonim "macbook pro 14, mbp m3, laptop coding apple, laptop kreator mac" .
+:Laptop_023_MacBookPro16M4Max :memilikiSinonim "macbook pro 16 m4 max, mbp 16, laptop sultan apple, workstation mac tertinggi" .
+:Laptop_024_Aspire3A314 :memilikiSinonim "acer aspire 3, a314, laptop sekolah murah, laptop administrasi" .
+:Laptop_028_NitroV15 :memilikiSinonim "acer nitro v 15, nitro 5, laptop gaming murah rtx, gaming mahasiswa" .
+:Laptop_030_PredatorHeliosNeo16 :memilikiSinonim "predator helios neo, laptop gaming acer predator, rtx gaming" .
+:Laptop_033_ChromebookSpin514 :memilikiSinonim "chromebook spin, laptop lipat chromeos, laptop edukasi layar sentuh" .
+:Laptop_036_XPS139340 :memilikiSinonim "dell xps 13, ultrabook eksekutif, bezel tipis infinityedge" .
+:Laptop_043_Alienwarem16R2 :memilikiSinonim "alienware m16, laptop gaming alienware, dell gaming flagship" .
+:Laptop_046_Envyx36014 :memilikiSinonim "hp envy x360, laptop lipat 360 derajat, layar sentuh oled kreator" .
+:Laptop_051_Victus15 :memilikiSinonim "hp victus 15, laptop gaming hp terjangkau, rtx gaming" .
+:Laptop_054_IdeaPadSlim314 :memilikiSinonim "ideapad slim 3, laptop harian lenovo, laptop mahasiswa murah" .
+:Laptop_058_ThinkPadE14Gen6 :memilikiSinonim "thinkpad e14, laptop bisnis legendaris, keyboard nyaman, laptop programmer, kantor" .
+:Laptop_060_ThinkPadX1CarbonGen12 :memilikiSinonim "thinkpad x1 carbon, laptop eksekutif serat karbon, bisnis flagship" .
+:Laptop_061_LegionSlim516 :memilikiSinonim "lenovo legion slim 5, laptop gaming tipis lenovo, kreator gaming" .
+:Laptop_063_LOQ15 :memilikiSinonim "lenovo loq 15, laptop gaming entry lenovo, penerus ideapad gaming" .
+:Laptop_069_Katana15 :memilikiSinonim "msi katana 15, laptop gaming msi populer, rtx gaming" .
+:Laptop_072_RaiderGE78HX :memilikiSinonim "msi raider ge78, laptop gaming rgb, monster gaming msi" .
+:Laptop_079_SurfacePro10 :memilikiSinonim "surface pro 10, tablet windows, 2-in-1 detachable, bisnis mobile" .
+:Laptop_092_Titan18HX :memilikiSinonim "msi titan 18 hx, laptop gaming termahal, pengganti desktop, desktop replacement, 4tb ssd" .
+:Laptop_100_ROGStrixSCAR18 :memilikiSinonim "rog strix scar 18, laptop gaming esports tertinggi, layar 18 inch miniled" .
+
+#################################################################
+#    Penyempurnaan sinonim dan istilah pencarian (2026-11)
+#    Sinonim bersifat alias pencarian, bukan aturan klasifikasi.
+#################################################################
+
+# Brand: variasi penulisan dan frasa yang umum dipakai pengguna
+:ASUS :memilikiSinonim "asus, asus laptop, laptop asus, notebook asus, merk asus, merek asus" .
+:Acer :memilikiSinonim "acer, laptop acer, notebook acer, merk acer, merek acer" .
+:Lenovo :memilikiSinonim "lenovo, laptop lenovo, notebook lenovo, leno" .
+:HP :memilikiSinonim "hewlett packard, hewlett-packard, laptop hp, notebook hp, merk hp, merek hp" .
+:Dell :memilikiSinonim "dell, laptop dell, notebook dell, merk dell, merek dell" .
+:Apple :memilikiSinonim "apple, mac, macbook, laptop apple, notebook apple" .
+:MSI :memilikiSinonim "msi, laptop msi, notebook msi, micro-star international" .
+:Microsoft :memilikiSinonim "microsoft, surface, laptop surface, surface laptop" .
+
+# Kategori penggunaan dan bentuk perangkat
+:GamingLaptop :memilikiSinonim "laptop gaming, gaming laptop, laptop game, laptop untuk gaming, laptop main game, gaming notebook, laptop gamer, esports, bermain game" .
+:BusinessLaptop :memilikiSinonim "laptop bisnis, laptop kantor, laptop kantoran, laptop kerja, office laptop, enterprise laptop, laptop perusahaan, administrasi kantor" .
+:Ultrabook :memilikiSinonim "ultrabook, laptop tipis, laptop ringan, laptop slim, thin and light, slim laptop, laptop portable, laptop portabel, mudah dibawa, mobilitas tinggi" .
+:BudgetLaptop :memilikiSinonim "budget laptop, laptop budget, laptop murah, laptop terjangkau, laptop ekonomis, entry level, entry-level, laptop harga rendah, hemat" .
+:PremiumLaptop :memilikiSinonim "laptop premium, laptop kelas atas, laptop flagship, laptop mewah, kualitas premium" .
+:HighEndLaptop :memilikiSinonim "laptop high-end, laptop high end, laptop performa tinggi, laptop kelas tertinggi, ultra high-end" .
+:WorkstationLaptop :memilikiSinonim "workstation laptop, mobile workstation, laptop rendering, laptop render, laptop editing, laptop kreator, content creator, desain grafis, arsitektur, cad, 3d rendering" .
+:TwoInOneLaptop :memilikiSinonim "laptop 2-in-1, laptop dua dalam satu, laptop lipat, convertible laptop, hybrid laptop, laptop tablet, layar putar 360, touchscreen laptop" .
+
+# Kebutuhan umum tidak otomatis mengubah kelas harga/performa
+:Laptop :memilikiSinonim "laptop kuliah, laptop mahasiswa, laptop pelajar, laptop sekolah, laptop programmer, laptop coding, laptop developer, laptop untuk pemrograman, laptop belajar, laptop produktivitas" .
+
+# Processor: alias generasi/keluarga tanpa menghilangkan nama model lengkap
+:IntelCore :memilikiSinonim "intel core i3, intel i3, core i3, i3, intel core i5, intel i5, core i5, i5, intel core i7, intel i7, core i7, i7, intel core i9, intel i9, core i9, i9" .
+:IntelCoreUltra :memilikiSinonim "intel core ultra 5, core ultra 5, ultra 5, intel core ultra 7, core ultra 7, ultra 7, intel core ultra 9, core ultra 9, ultra 9" .
+:Ryzen3 :memilikiSinonim "ryzen 3, amd ryzen 3, r3" .
+:Ryzen5 :memilikiSinonim "ryzen 5, amd ryzen 5, r5" .
+:Ryzen7 :memilikiSinonim "ryzen 7, amd ryzen 7, r7" .
+:Ryzen9 :memilikiSinonim "ryzen 9, amd ryzen 9, r9" .
+:M1 :memilikiSinonim "apple m1, chip m1, m1" .
+:M2 :memilikiSinonim "apple m2, chip m2, m2" .
+:M3 :memilikiSinonim "apple m3, chip m3, m3" .
+:M4 :memilikiSinonim "apple m4, chip m4, m4" .
+
+# GPU: bedakan grafis terintegrasi dan dedicated
+:NVIDIA :memilikiSinonim "nvidia, geforce, gpu nvidia, vga nvidia, kartu grafis nvidia" .
+:GeForceRTX :memilikiSinonim "geforce rtx, nvidia rtx, rtx, rtx 3050, rtx 4050, rtx 4060, rtx 4070, rtx 4080, rtx 4090, ray tracing, dlss" .
+:GeForceGTX :memilikiSinonim "geforce gtx, nvidia gtx, gtx, gtx 1650, gtx 1660" .
+:DedicatedGPU :memilikiSinonim "dedicated gpu, discrete gpu, vga dedicated, vga diskrit, gpu terpisah, kartu grafis dedicated" .
+:IntegratedGPU :memilikiSinonim "integrated gpu, igpu, vga onboard, gpu terintegrasi, grafis bawaan, shared graphics" .
+:IntelGraphics :memilikiSinonim "intel graphics, intel iris xe, intel uhd graphics, intel uhd, intel arc graphics, vga intel" .
+:AMDGPU :memilikiSinonim "amd gpu, amd radeon, radeon, vga amd, gpu amd, kartu grafis amd" .
+
+# RAM dan storage
+:RAM :memilikiSinonim "ram, random access memory, memori ram, memori utama, kapasitas memori, 8gb ram, 16gb ram, 32gb ram" .
+:DDR4RAM :memilikiSinonim "ddr4, ram ddr4, ddr4 ram, pc4" .
+:DDR5RAM :memilikiSinonim "ddr5, ram ddr5, ddr5 ram, pc5" .
+:LPDDR5RAM :memilikiSinonim "lpddr5, lpddr5 ram, low power ddr5" .
+:Storage :memilikiSinonim "storage, penyimpanan, kapasitas penyimpanan, media penyimpanan" .
+:SSD :memilikiSinonim "ssd, solid state drive, solid-state drive, penyimpanan ssd" .
+:NVMeSSD :memilikiSinonim "nvme, nvme ssd, m.2 nvme, pcie ssd, ssd m2" .
+:HDD :memilikiSinonim "hdd, hard disk, harddisk, hard drive, hard disk drive" .
+
+# Display: atribut layar tetap dibedakan melalui properti spesifiknya
+:Display :memilikiSinonim "display, layar, screen, panel layar" .
+:FullHDDisplay :memilikiSinonim "full hd, fullhd, fhd, 1080p, 1920x1080" .
+:QHDDisplay :memilikiSinonim "qhd, quad hd, 2k, 1440p, wqxga, 2560x1440, 2.8k, 3k, 3.2k" .
+:UHDDisplay :memilikiSinonim "uhd, ultra hd, 4k, 2160p, 3840x2160" .
+:OLEDDisplay :memilikiSinonim "oled, layar oled, amoled, organic led" .
+:IPSDisplay :memilikiSinonim "ips, in-plane switching, layar ips" .
+:TouchscreenDisplay :memilikiSinonim "touchscreen, layar sentuh, touch display, multi-touch" .
