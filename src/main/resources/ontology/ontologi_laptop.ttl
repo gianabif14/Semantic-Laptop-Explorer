@@ -346,6 +346,12 @@
               rdfs:range xsd:integer .
 
 
+###  http://example.org/laptop-ontology#pathFoto
+:pathFoto rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Laptop ;
+          rdfs:range xsd:string .
+
+
 ###  http://example.org/laptop-ontology#nomorModel
 :nomorModel rdf:type owl:DatatypeProperty ;
             rdfs:domain :Laptop ;
@@ -1165,502 +1171,502 @@
     :namaModel "ASUS Vivobook Go 14 E1404" ; :nomorModel "CAT-001" ; :tahunRilis 2024 ;
     :harga 7500000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_AMDRyzen57520U ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/asus-vivobook-go-14-e1404.jpg" .
  :Laptop_002_Vivobook14X1404 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
     :namaModel "ASUS Vivobook 14 X1404" ; :nomorModel "CAT-002" ; :tahunRilis 2025 ;
     :harga 8500000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCorei51335U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/asus-vivobook-14-x1404.jpg" .
  :Laptop_003_Vivobook15X1504 rdf:type owl:NamedIndividual, :Laptop, :MidRangeLaptop ;
     :namaModel "ASUS Vivobook 15 X1504" ; :nomorModel "CAT-003" ; :tahunRilis 2026 ;
     :harga 9500000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCorei51335U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/asus-vivobook-15-x1504.jpg" .
  :Laptop_004_Zenbook14OLEDUX3405 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "ASUS Zenbook 14 OLED UX3405" ; :nomorModel "CAT-004" ; :tahunRilis 2023 ;
     :harga 21900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/asus-zenbook-14-oled-ux3405.jpg" .
  :Laptop_005_ZenbookS13OLED rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "ASUS Zenbook S 13 OLED" ; :nomorModel "CAT-005" ; :tahunRilis 2024 ;
     :harga 23900000.0 ; :beratKg 1.86 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_AMDRyzen78840U ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/asus-zenbook-s-13-oled.jpg" .
  :Laptop_006_ROGZephyrusG14 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "ASUS ROG Zephyrus G14" ; :nomorModel "CAT-006" ; :tahunRilis 2025 ;
     :harga 29900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_AMDRyzen98945HS ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLEDQHD ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLEDQHD ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/asus-rog-zephyrus-g14.jpg" .
  :Laptop_007_ROGZephyrusG16 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "ASUS ROG Zephyrus G16" ; :nomorModel "CAT-007" ; :tahunRilis 2026 ;
     :harga 42900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLEDQHD ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLEDQHD ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/asus-rog-zephyrus-g16.jpg" .
  :Laptop_008_ROGStrixG16 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "ASUS ROG Strix G16" ; :nomorModel "CAT-008" ; :tahunRilis 2023 ;
     :harga 27900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/asus-rog-strix-g16.jpg" .
  :Laptop_009_TUFGamingA15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "ASUS TUF Gaming A15" ; :nomorModel "CAT-009" ; :tahunRilis 2024 ;
     :harga 16900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_AMDRyzen78845HS ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/asus-tuf-gaming-a15.jpg" .
  :Laptop_010_TUFGamingF15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "ASUS TUF Gaming F15" ; :nomorModel "CAT-010" ; :tahunRilis 2025 ;
     :harga 15900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCorei713620H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/asus-tuf-gaming-f15.jpg" .
  :Laptop_011_ExpertBookB1 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
     :namaModel "ASUS ExpertBook B1" ; :nomorModel "CAT-011" ; :tahunRilis 2026 ;
     :harga 9900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCorei51335U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/asus-expertbook-b1.jpg" .
  :Laptop_012_ProArtStudiobook16OLED rdf:type owl:NamedIndividual, :Laptop, :WorkstationLaptop ;
     :namaModel "ASUS ProArt Studiobook 16 OLED" ; :nomorModel "CAT-012" ; :tahunRilis 2023 ;
     :harga 45900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCorei913980HX ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED4K ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED4K ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/asus-proart-studiobook-16-oled.jpg" .
  :Laptop_013_MacBookAir13M2 rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
     :namaModel "Apple MacBook Air 13 M2" ; :nomorModel "CAT-013" ; :tahunRilis 2024 ;
     :harga 14900000.0 ; :beratKg 1.88 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM2 ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_256GB ;
-    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetina ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_macOS .
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetina ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_macOS ; :pathFoto "/images/apple-macbook-air-13-m2.jpg" .
  :Laptop_014_MacBookAir13M3 rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
     :namaModel "Apple MacBook Air 13 M3" ; :nomorModel "CAT-014" ; :tahunRilis 2025 ;
     :harga 17900000.0 ; :beratKg 1.88 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM3 ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetina ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_macOS .
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetina ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_macOS ; :pathFoto "/images/apple-macbook-air-13-m3.jpg" .
  :Laptop_015_MacBookAir15M3 rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
     :namaModel "Apple MacBook Air 15 M3" ; :nomorModel "CAT-015" ; :tahunRilis 2026 ;
     :harga 21900000.0 ; :beratKg 1.96 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM3 ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetina ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_macOS .
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetina ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_macOS ; :pathFoto "/images/apple-macbook-air-15-m3.jpg" .
  :Laptop_016_MacBookAir13M4 rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
     :namaModel "Apple MacBook Air 13 M4" ; :nomorModel "CAT-016" ; :tahunRilis 2023 ;
     :harga 18900000.0 ; :beratKg 1.88 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM4 ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetina ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_macOS .
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetina ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_macOS ; :pathFoto "/images/apple-macbook-air-13-m4.jpg" .
  :Laptop_017_MacBookAir15M4 rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
     :namaModel "Apple MacBook Air 15 M4" ; :nomorModel "CAT-017" ; :tahunRilis 2024 ;
     :harga 22900000.0 ; :beratKg 1.96 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM4 ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetina ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_macOS .
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetina ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_macOS ; :pathFoto "/images/apple-macbook-air-15-m4.jpg" .
  :Laptop_018_MacBookPro14M3 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "Apple MacBook Pro 14 M3" ; :nomorModel "CAT-018" ; :tahunRilis 2025 ;
     :harga 26900000.0 ; :beratKg 1.91 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM3 ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS .
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS ; :pathFoto "/images/apple-macbook-pro-14-m3.jpg" .
  :Laptop_019_MacBookPro14M3Pro rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "Apple MacBook Pro 14 M3 Pro" ; :nomorModel "CAT-019" ; :tahunRilis 2026 ;
     :harga 32900000.0 ; :beratKg 1.91 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM3Pro ; :memilikiRAM :RAM_18GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS .
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS ; :pathFoto "/images/apple-macbook-pro-14-m3-pro.jpg" .
  :Laptop_020_MacBookPro16M3Pro rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "Apple MacBook Pro 16 M3 Pro" ; :nomorModel "CAT-020" ; :tahunRilis 2023 ;
     :harga 39900000.0 ; :beratKg 2.01 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM3Pro ; :memilikiRAM :RAM_18GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS .
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS ; :pathFoto "/images/apple-macbook-pro-16-m3-pro.jpg" .
  :Laptop_021_MacBookPro14M4 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "Apple MacBook Pro 14 M4" ; :nomorModel "CAT-021" ; :tahunRilis 2024 ;
     :harga 27900000.0 ; :beratKg 1.91 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM4 ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS .
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS ; :pathFoto "/images/apple-macbook-pro-14-m4.jpg" .
  :Laptop_022_MacBookPro14M4Pro rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "Apple MacBook Pro 14 M4 Pro" ; :nomorModel "CAT-022" ; :tahunRilis 2025 ;
     :harga 35900000.0 ; :beratKg 1.91 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM4Pro ; :memilikiRAM :RAM_24GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS .
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS ; :pathFoto "/images/apple-macbook-pro-14-m4-pro.jpg" .
  :Laptop_023_MacBookPro16M4Max rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop ;
     :namaModel "Apple MacBook Pro 16 M4 Max" ; :nomorModel "CAT-023" ; :tahunRilis 2026 ;
     :harga 59900000.0 ; :beratKg 2.01 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM4Max ; :memilikiRAM :RAM_36GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_macOS .
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_macOS ; :pathFoto "/images/apple-macbook-pro-16-m4-max.jpg" .
  :Laptop_024_Aspire3A314 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
     :namaModel "Acer Aspire 3 A314" ; :nomorModel "CAT-024" ; :tahunRilis 2023 ;
     :harga 6500000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_AMDRyzen37320U ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/acer-aspire-3-a314.jpg" .
  :Laptop_025_Aspire5A515 rdf:type owl:NamedIndividual, :Laptop, :MidRangeLaptop ;
     :namaModel "Acer Aspire 5 A515" ; :nomorModel "CAT-025" ; :tahunRilis 2024 ;
     :harga 9200000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCorei51335U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/acer-aspire-5-a515.jpg" .
  :Laptop_026_SwiftGo14OLED rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
     :namaModel "Acer Swift Go 14 OLED" ; :nomorModel "CAT-026" ; :tahunRilis 2025 ;
     :harga 13900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCoreUltra5125H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/acer-swift-go-14-oled.jpg" .
  :Laptop_027_SwiftX14 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "Acer Swift X 14" ; :nomorModel "CAT-027" ; :tahunRilis 2026 ;
     :harga 22900000.0 ; :beratKg 1.92 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/acer-swift-x-14.webp" .
  :Laptop_028_NitroV15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "Acer Nitro V 15" ; :nomorModel "CAT-028" ; :tahunRilis 2023 ;
     :harga 13900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCorei513420H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/acer-nitro-v-15.jpg" .
  :Laptop_029_Nitro16 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "Acer Nitro 16" ; :nomorModel "CAT-029" ; :tahunRilis 2024 ;
     :harga 20900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_AMDRyzen78845HS ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/acer-nitro-16.jpg" .
  :Laptop_030_PredatorHeliosNeo16 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "Acer Predator Helios Neo 16" ; :nomorModel "CAT-030" ; :tahunRilis 2025 ;
     :harga 24900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCorei714700HX ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/acer-predator-helios-neo-16.jpg" .
  :Laptop_031_PredatorTritonNeo16 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "Acer Predator Triton Neo 16" ; :nomorModel "CAT-031" ; :tahunRilis 2026 ;
     :harga 32900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLEDQHD ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLEDQHD ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/acer-predator-triton-neo-16.jpg" .
  :Laptop_032_TravelMateP2 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
     :namaModel "Acer TravelMate P2" ; :nomorModel "CAT-032" ; :tahunRilis 2023 ;
     :harga 8900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCorei51335U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/acer-travelmate-p2.jpg" .
  :Laptop_033_ChromebookSpin514 rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
     :namaModel "Acer Chromebook Spin 514" ; :nomorModel "CAT-033" ; :tahunRilis 2024 ;
     :harga 8500000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
     :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_AMDRyzen55625C ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_256GB ;
-    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDTouch ; :memilikiOperatingSystem :OS_ChromeOS ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_ChromeOS .
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDTouch ; :memilikiOperatingSystem :OS_ChromeOS ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_ChromeOS ; :pathFoto "/images/acer-chromebook-spin-514.jpg" .
  :Laptop_034_Inspiron145430 rdf:type owl:NamedIndividual, :Laptop, :MidRangeLaptop ;
     :namaModel "Dell Inspiron 14 5430" ; :nomorModel "CAT-034" ; :tahunRilis 2025 ;
     :harga 11900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCorei71360P ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/dell-inspiron-14-5430.jpg" .
  :Laptop_035_Inspiron153530 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
     :namaModel "Dell Inspiron 15 3530" ; :nomorModel "CAT-035" ; :tahunRilis 2026 ;
     :harga 7800000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCorei51334U ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/dell-inspiron-15-3530.jpg" .
  :Laptop_036_XPS139340 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "Dell XPS 13 9340" ; :nomorModel "CAT-036" ; :tahunRilis 2023 ;
     :harga 24900000.0 ; :beratKg 1.87 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED3K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED3K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/dell-xps-13-9340.jpg" .
  :Laptop_037_XPS149440 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "Dell XPS 14 9440" ; :nomorModel "CAT-037" ; :tahunRilis 2024 ;
     :harga 32900000.0 ; :beratKg 1.92 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED32K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED32K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/dell-xps-14-9440.jpg" .
  :Laptop_038_XPS169640 rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop ;
     :namaModel "Dell XPS 16 9640" ; :nomorModel "CAT-038" ; :tahunRilis 2025 ;
     :harga 45900000.0 ; :beratKg 2.02 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED4K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED4K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/dell-xps-16-9640.jpg" .
  :Laptop_039_Latitude5450 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
     :namaModel "Dell Latitude 5450" ; :nomorModel "CAT-039" ; :tahunRilis 2026 ;
     :harga 18900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra5135U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/dell-latitude-5450.jpg" .
  :Laptop_040_Latitude7450 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
     :namaModel "Dell Latitude 7450" ; :nomorModel "CAT-040" ; :tahunRilis 2023 ;
     :harga 25900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra7165U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/dell-latitude-7450.jpg" .
  :Laptop_041_Precision3591 rdf:type owl:NamedIndividual, :Laptop, :WorkstationLaptop ;
     :namaModel "Dell Precision 3591" ; :nomorModel "CAT-041" ; :tahunRilis 2024 ;
     :harga 29900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra7165H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/dell-precision-3591.jpg" .
  :Laptop_042_G155530 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "Dell G15 5530" ; :nomorModel "CAT-042" ; :tahunRilis 2025 ;
     :harga 18900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCorei713650HX ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/dell-g15-5530.jpg" .
  :Laptop_043_Alienwarem16R2 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "Dell Alienware m16 R2" ; :nomorModel "CAT-043" ; :tahunRilis 2026 ;
     :harga 35900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/dell-alienware-m16-r2.jpg" .
  :Laptop_044_14sdq rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
     :namaModel "HP 14s-dq" ; :nomorModel "CAT-044" ; :tahunRilis 2023 ;
     :harga 6900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCorei31315U ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/hp-14s-dq.jpg" .
  :Laptop_045_Pavilion15 rdf:type owl:NamedIndividual, :Laptop, :MidRangeLaptop ;
     :namaModel "HP Pavilion 15" ; :nomorModel "CAT-045" ; :tahunRilis 2024 ;
     :harga 9900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_AMDRyzen57530U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/hp-pavilion-15.jpg" .
  :Laptop_046_Envyx36014 rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
     :namaModel "HP Envy x360 14" ; :nomorModel "CAT-046" ; :tahunRilis 2025 ;
     :harga 16900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
     :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCoreUltra5125U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLEDTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLEDTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/hp-envy-x360-14.jpg" .
  :Laptop_047_OmniBookX14 rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
     :namaModel "HP OmniBook X 14" ; :nomorModel "CAT-047" ; :tahunRilis 2026 ;
     :harga 18900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_QualcommSnapdragonXElite ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_QualcommGPU ; :memilikiDisplay :DISPLAY_22KIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_QualcommGPU ; :memilikiDisplay :DISPLAY_22KIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/hp-omnibook-x-14.jpg" .
  :Laptop_048_Spectrex36014 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "HP Spectre x360 14" ; :nomorModel "CAT-048" ; :tahunRilis 2023 ;
     :harga 25900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
     :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28KTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28KTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/hp-spectre-x360-14.jpg" .
  :Laptop_049_EliteBook840G11 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
     :namaModel "HP EliteBook 840 G11" ; :nomorModel "CAT-049" ; :tahunRilis 2024 ;
     :harga 21900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCoreUltra7165U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/hp-elitebook-840-g11.jpg" .
  :Laptop_050_ProBook440G11 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
     :namaModel "HP ProBook 440 G11" ; :nomorModel "CAT-050" ; :tahunRilis 2025 ;
     :harga 14900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCoreUltra5125U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/hp-probook-440-g11.jpg" .
  :Laptop_051_Victus15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "HP Victus 15" ; :nomorModel "CAT-051" ; :tahunRilis 2026 ;
     :harga 13900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_AMDRyzen58645HS ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/hp-victus-15.jpg" .
  :Laptop_052_Omen16 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "HP Omen 16" ; :nomorModel "CAT-052" ; :tahunRilis 2023 ;
     :harga 24900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCorei714700HX ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/hp-omen-16.jpg" .
  :Laptop_053_ZBookPowerG11 rdf:type owl:NamedIndividual, :Laptop, :WorkstationLaptop ;
     :namaModel "HP ZBook Power G11" ; :nomorModel "CAT-053" ; :tahunRilis 2024 ;
     :harga 31900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/hp-zbook-power-g11.jpg" .
  :Laptop_054_IdeaPadSlim314 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
     :namaModel "Lenovo IdeaPad Slim 3 14" ; :nomorModel "CAT-054" ; :tahunRilis 2025 ;
     :harga 7200000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_AMDRyzen57520U ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/lenovo-ideapad-slim-3-14.jpg" .
  :Laptop_055_IdeaPadSlim514 rdf:type owl:NamedIndividual, :Laptop, :MidRangeLaptop ;
     :namaModel "Lenovo IdeaPad Slim 5 14" ; :nomorModel "CAT-055" ; :tahunRilis 2026 ;
     :harga 11900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_AMDRyzen78845HS ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/lenovo-ideapad-slim-5-14.jpg" .
  :Laptop_056_YogaSlim7iAuraEdition rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "Lenovo Yoga Slim 7i Aura Edition" ; :nomorModel "CAT-056" ; :tahunRilis 2023 ;
     :harga 21900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCoreUltra7258V ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/lenovo-yoga-slim-7i-aura-edition.jpg" .
  :Laptop_057_Yoga72in114 rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
     :namaModel "Lenovo Yoga 7 2-in-1 14" ; :nomorModel "CAT-057" ; :tahunRilis 2024 ;
     :harga 16900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_AMDRyzen78840HS ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_OLEDTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_OLEDTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/lenovo-yoga-7-2-in-1-14.jpg" .
  :Laptop_058_ThinkPadE14Gen6 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
     :namaModel "Lenovo ThinkPad E14 Gen 6" ; :nomorModel "CAT-058" ; :tahunRilis 2025 ;
     :harga 13900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_AMDRyzen77735U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/lenovo-thinkpad-e14-gen-6.jpg" .
  :Laptop_059_ThinkPadT14Gen5 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
     :namaModel "Lenovo ThinkPad T14 Gen 5" ; :nomorModel "CAT-059" ; :tahunRilis 2026 ;
     :harga 22900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155U ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/lenovo-thinkpad-t14-gen-5.jpg" .
  :Laptop_060_ThinkPadX1CarbonGen12 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "Lenovo ThinkPad X1 Carbon Gen 12" ; :nomorModel "CAT-060" ; :tahunRilis 2023 ;
     :harga 32900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155U ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/lenovo-thinkpad-x1-carbon-gen-12.webp" .
  :Laptop_061_LegionSlim516 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "Lenovo Legion Slim 5 16" ; :nomorModel "CAT-061" ; :tahunRilis 2024 ;
     :harga 20900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_AMDRyzen78845HS ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/lenovo-legion-slim-5-16.jpg" .
  :Laptop_062_LegionPro5i rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "Lenovo Legion Pro 5i" ; :nomorModel "CAT-062" ; :tahunRilis 2025 ;
     :harga 27900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/lenovo-legion-pro-5i.jpg" .
  :Laptop_063_LOQ15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "Lenovo LOQ 15" ; :nomorModel "CAT-063" ; :tahunRilis 2026 ;
     :harga 13900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCorei513450HX ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/lenovo-loq-15.jpg" .
  :Laptop_064_ThinkPadP1Gen7 rdf:type owl:NamedIndividual, :Laptop, :WorkstationLaptop ;
     :namaModel "Lenovo ThinkPad P1 Gen 7" ; :nomorModel "CAT-064" ; :tahunRilis 2023 ;
     :harga 42900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_64GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED4K ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED4K ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/lenovo-thinkpad-p1-gen-7.jpg" .
  :Laptop_065_Modern14C13M rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
     :namaModel "MSI Modern 14 C13M" ; :nomorModel "CAT-065" ; :tahunRilis 2024 ;
     :harga 7900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei51335U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/msi-modern-14-c13m.jpg" .
  :Laptop_066_Prestige13AIEvo rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
     :namaModel "MSI Prestige 13 AI Evo" ; :nomorModel "CAT-066" ; :tahunRilis 2025 ;
     :harga 18900000.0 ; :beratKg 1.86 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/msi-prestige-13-ai-evo.jpg" .
  :Laptop_067_Prestige16AIStudio rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "MSI Prestige 16 AI Studio" ; :nomorModel "CAT-067" ; :tahunRilis 2026 ;
     :harga 25900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED4K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED4K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/msi-prestige-16-ai-studio.jpg" .
  :Laptop_068_Thin15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "MSI Thin 15" ; :nomorModel "CAT-068" ; :tahunRilis 2023 ;
     :harga 11900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei713620H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/msi-thin-15.jpg" .
  :Laptop_069_Katana15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "MSI Katana 15" ; :nomorModel "CAT-069" ; :tahunRilis 2024 ;
     :harga 17900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei713620H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/msi-katana-15.jpg" .
  :Laptop_070_Cyborg15 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "MSI Cyborg 15" ; :nomorModel "CAT-070" ; :tahunRilis 2025 ;
     :harga 14900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei713620H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/msi-cyborg-15.jpg" .
  :Laptop_071_Vector16HX rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "MSI Vector 16 HX" ; :nomorModel "CAT-071" ; :tahunRilis 2026 ;
     :harga 32900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/msi-vector-16-hx.jpg" .
  :Laptop_072_RaiderGE78HX rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop, :GamingLaptop ;
     :namaModel "MSI Raider GE78 HX" ; :nomorModel "CAT-072" ; :tahunRilis 2023 ;
     :harga 49900000.0 ; :beratKg 2.05 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/msi-raider-ge78-hx.jpg" .
  :Laptop_073_CreatorZ17HXStudio rdf:type owl:NamedIndividual, :Laptop, :WorkstationLaptop ;
     :namaModel "MSI Creator Z17 HX Studio" ; :nomorModel "CAT-073" ; :tahunRilis 2024 ;
     :harga 42900000.0 ; :beratKg 2.05 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
     :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei913980HX ; :memilikiRAM :RAM_64GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDTouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDTouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/msi-creator-z17-hx-studio.jpg" .
  :Laptop_074_SurfaceLaptopGo3 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
     :namaModel "Microsoft Surface Laptop Go 3" ; :nomorModel "CAT-074" ; :tahunRilis 2025 ;
     :harga 10900000.0 ; :beratKg 1.82 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :microsoftBrand ; :memilikiProcessor :CPU_IntelCorei51235U ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_256GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_PixelSense ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_PixelSense ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/microsoft-surface-laptop-go-3.jpg" .
  :Laptop_075_SurfaceLaptop6135 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
     :namaModel "Microsoft Surface Laptop 6 13.5" ; :nomorModel "CAT-075" ; :tahunRilis 2026 ;
     :harga 21900000.0 ; :beratKg 1.88 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
     :diproduksiOleh :microsoftBrand ; :memilikiProcessor :CPU_IntelCoreUltra5135H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_PixelSenseTouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_PixelSenseTouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/microsoft-surface-laptop-6-13-5.jpg" .
  :Laptop_076_SurfaceLaptop615 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
     :namaModel "Microsoft Surface Laptop 6 15" ; :nomorModel "CAT-076" ; :tahunRilis 2023 ;
     :harga 25900000.0 ; :beratKg 1.95 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
     :diproduksiOleh :microsoftBrand ; :memilikiProcessor :CPU_IntelCoreUltra7165H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_PixelSenseTouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_PixelSenseTouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/microsoft-surface-laptop-6-15.jpg" .
  :Laptop_077_SurfaceLaptop7138 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "Microsoft Surface Laptop 7 13.8" ; :nomorModel "CAT-077" ; :tahunRilis 2024 ;
     :harga 21900000.0 ; :beratKg 1.89 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
     :diproduksiOleh :microsoftBrand ; :memilikiProcessor :CPU_QualcommSnapdragonXPlus ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_QualcommGPU ; :memilikiDisplay :DISPLAY_PixelSenseTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_QualcommGPU ; :memilikiDisplay :DISPLAY_PixelSenseTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/microsoft-surface-laptop-7-13-8.jpg" .
  :Laptop_078_SurfaceLaptop715 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "Microsoft Surface Laptop 7 15" ; :nomorModel "CAT-078" ; :tahunRilis 2025 ;
     :harga 25900000.0 ; :beratKg 1.95 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
     :diproduksiOleh :microsoftBrand ; :memilikiProcessor :CPU_QualcommSnapdragonXElite ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_QualcommGPU ; :memilikiDisplay :DISPLAY_PixelSenseTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_QualcommGPU ; :memilikiDisplay :DISPLAY_PixelSenseTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/microsoft-surface-laptop-7-15.jpg" .
  :Laptop_079_SurfacePro10 rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
     :namaModel "Microsoft Surface Pro 10" ; :nomorModel "CAT-079" ; :tahunRilis 2026 ;
     :harga 23900000.0 ; :beratKg 1.85 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
     :diproduksiOleh :microsoftBrand ; :memilikiProcessor :CPU_IntelCoreUltra7165U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_PixelSenseTouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_PixelSenseTouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/microsoft-surface-pro-10.jpg" .
  :Laptop_080_VivobookS14OLED rdf:type owl:NamedIndividual, :Laptop, :Ultrabook ;
     :namaModel "ASUS Vivobook S 14 OLED" ; :nomorModel "CAT-080" ; :tahunRilis 2023 ;
     :harga 15900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_Ultrabook ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/asus-vivobook-s-14-oled.jpg" .
  :Laptop_081_ROGFlowX13 rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
     :namaModel "ASUS ROG Flow X13" ; :nomorModel "CAT-081" ; :tahunRilis 2024 ;
     :harga 24900000.0 ; :beratKg 1.87 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_AMDRyzen97940HS ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDTouch ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/asus-rog-flow-x13.jpg" .
  :Laptop_082_AspireVero16 rdf:type owl:NamedIndividual, :Laptop, :MidRangeLaptop ;
     :namaModel "Acer Aspire Vero 16" ; :nomorModel "CAT-082" ; :tahunRilis 2025 ;
     :harga 11900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCoreUltra5125U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_MidRangeLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/acer-aspire-vero-16.jpg" .
  :Laptop_083_PredatorHelios18 rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop, :GamingLaptop ;
     :namaModel "Acer Predator Helios 18" ; :nomorModel "CAT-083" ; :tahunRilis 2026 ;
     :harga 44900000.0 ; :beratKg 2.10 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_QHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/acer-predator-helios-18.jpg" .
  :Laptop_084_Vostro3530 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
     :namaModel "Dell Vostro 3530" ; :nomorModel "CAT-084" ; :tahunRilis 2023 ;
     :harga 9900000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCorei51335U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/dell-vostro-3530.jpg" .
  :Laptop_085_Precision5690 rdf:type owl:NamedIndividual, :Laptop, :WorkstationLaptop ;
     :namaModel "Dell Precision 5690" ; :nomorModel "CAT-085" ; :tahunRilis 2024 ;
     :harga 49900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_64GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED4K ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED4K ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/dell-precision-5690.jpg" .
  :Laptop_086_DragonflyG4 rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "HP Dragonfly G4" ; :nomorModel "CAT-086" ; :tahunRilis 2025 ;
     :harga 28900000.0 ; :beratKg 1.88 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
     :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCorei71365U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGATouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGATouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/hp-dragonfly-g4.jpg" .
  :Laptop_087_OmenTranscend14 rdf:type owl:NamedIndividual, :Laptop, :GamingLaptop ;
     :namaModel "HP Omen Transcend 14" ; :nomorModel "CAT-087" ; :tahunRilis 2026 ;
     :harga 29900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_OLED28K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_GamingLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/hp-omen-transcend-14.jpg" .
  :Laptop_088_V14G4 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
     :namaModel "Lenovo V14 G4" ; :nomorModel "CAT-088" ; :tahunRilis 2023 ;
     :harga 6900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_AMDRyzen57520U ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_AMDIntegratedGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/lenovo-v14-g4.jpg" .
  :Laptop_089_ThinkBook14Gen7 rdf:type owl:NamedIndividual, :Laptop, :BusinessLaptop ;
     :namaModel "Lenovo ThinkBook 14 Gen 7" ; :nomorModel "CAT-089" ; :tahunRilis 2024 ;
     :harga 12900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCoreUltra5125U ; :memilikiRAM :RAM_16GB_DDR5 ; :memilikiStorage :SSD_512GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_WUXGAIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_BusinessLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/lenovo-thinkbook-14-gen-7.jpg" .
  :Laptop_090_YogaPro9i16 rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop ;
     :namaModel "Lenovo Yoga Pro 9i 16" ; :nomorModel "CAT-090" ; :tahunRilis 2025 ;
     :harga 35900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCoreUltra9185H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_MiniLED32K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_MiniLED32K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/lenovo-yoga-pro-9i-16.jpg" .
  :Laptop_091_SummitE13AIEvo rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
     :namaModel "MSI Summit E13 AI Evo" ; :nomorModel "CAT-091" ; :tahunRilis 2026 ;
     :harga 19900000.0 ; :beratKg 1.86 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
     :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCoreUltra7155H ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_QHDTouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_QHDTouch ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/msi-summit-e13-ai-evo.jpg" .
  :Laptop_092_Titan18HX rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop, :GamingLaptop ;
     :namaModel "MSI Titan 18 HX" ; :nomorModel "CAT-092" ; :tahunRilis 2023 ;
     :harga 69900000.0 ; :beratKg 2.10 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :msiBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_64GB_DDR5 ; :memilikiStorage :SSD_4096GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_MiniLED4K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_MiniLED4K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/msi-titan-18-hx.jpg" .
  :Laptop_093_ChromebookCX1 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
     :namaModel "ASUS Chromebook CX1" ; :nomorModel "CAT-093" ; :tahunRilis 2024 ;
     :harga 4500000.0 ; :beratKg 1.98 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCeleronN4500 ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_128GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_ChromeOS ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_ChromeOS .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_ChromeOS ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_ChromeOS ; :pathFoto "/images/asus-chromebook-cx1.jpg" .
  :Laptop_094_ChromebookPlus514 rdf:type owl:NamedIndividual, :Laptop, :BudgetLaptop ;
     :namaModel "Acer Chromebook Plus 514" ; :nomorModel "CAT-094" ; :tahunRilis 2025 ;
     :harga 6200000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :acerBrand ; :memilikiProcessor :CPU_IntelCorei3N305 ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_256GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_ChromeOS ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_ChromeOS .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDIPS ; :memilikiOperatingSystem :OS_ChromeOS ; :memilikiPriceRange :range_BudgetLaptop ; :kompatibelDengan :OS_ChromeOS ; :pathFoto "/images/acer-chromebook-plus-514.jpg" .
  :Laptop_095_Chromebookx36014 rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
     :namaModel "HP Chromebook x360 14" ; :nomorModel "CAT-095" ; :tahunRilis 2026 ;
     :harga 7900000.0 ; :beratKg 1.90 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
     :diproduksiOleh :hpBrand ; :memilikiProcessor :CPU_IntelCorei3N305 ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_256GB ;
-    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDTouch ; :memilikiOperatingSystem :OS_ChromeOS ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_ChromeOS .
+    :memilikiGPU :GPU_IntelGraphics ; :memilikiDisplay :DISPLAY_FHDTouch ; :memilikiOperatingSystem :OS_ChromeOS ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_ChromeOS ; :pathFoto "/images/hp-chromebook-x360-14.jpg" .
  :Laptop_096_ChromebookDuet5 rdf:type owl:NamedIndividual, :Laptop, :TwoInOneLaptop ;
     :namaModel "Lenovo Chromebook Duet 5" ; :nomorModel "CAT-096" ; :tahunRilis 2023 ;
     :harga 8500000.0 ; :beratKg 1.86 ; :warna "Silver / Gray" ; :adalahTouchscreen "true"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_QualcommSnapdragon7cGen2 ; :memilikiRAM :RAM_8GB_DDR4 ; :memilikiStorage :SSD_256GB ;
-    :memilikiGPU :GPU_QualcommGPU ; :memilikiDisplay :DISPLAY_OLEDTouch ; :memilikiOperatingSystem :OS_ChromeOS ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_ChromeOS .
+    :memilikiGPU :GPU_QualcommGPU ; :memilikiDisplay :DISPLAY_OLEDTouch ; :memilikiOperatingSystem :OS_ChromeOS ; :memilikiPriceRange :range_TwoInOneLaptop ; :kompatibelDengan :OS_ChromeOS ; :pathFoto "/images/lenovo-chromebook-duet-5.jpg" .
  :Laptop_097_Precision7680 rdf:type owl:NamedIndividual, :Laptop, :WorkstationLaptop ;
     :namaModel "Dell Precision 7680" ; :nomorModel "CAT-097" ; :tahunRilis 2024 ;
     :harga 53900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :dellBrand ; :memilikiProcessor :CPU_IntelCorei913950HX ; :memilikiRAM :RAM_64GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_UHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_UHDIPS ; :memilikiOperatingSystem :OS_Windows11Pro ; :memilikiPriceRange :range_WorkstationLaptop ; :kompatibelDengan :OS_Windows11Pro ; :pathFoto "/images/dell-precision-7680.jpg" .
  :Laptop_098_MacBookPro16M4Pro rdf:type owl:NamedIndividual, :Laptop, :PremiumLaptop ;
     :namaModel "Apple MacBook Pro 16 M4 Pro" ; :nomorModel "CAT-098" ; :tahunRilis 2025 ;
     :harga 45900000.0 ; :beratKg 2.01 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :appleBrand ; :memilikiProcessor :CPU_AppleM4Pro ; :memilikiRAM :RAM_24GB_DDR5 ; :memilikiStorage :SSD_1024GB ;
-    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS .
+    :memilikiGPU :GPU_AppleIntegratedGraphics ; :memilikiDisplay :DISPLAY_LiquidRetinaXDR ; :memilikiOperatingSystem :OS_macOS ; :memilikiPriceRange :range_PremiumLaptop ; :kompatibelDengan :OS_macOS ; :pathFoto "/images/apple-macbook-pro-16-m4-pro.jpg" .
  :Laptop_099_Legion9i rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop, :GamingLaptop ;
     :namaModel "Lenovo Legion 9i" ; :nomorModel "CAT-099" ; :tahunRilis 2026 ;
     :harga 59900000.0 ; :beratKg 2.00 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :lenovoBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_64GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_MiniLED32K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_MiniLED32K ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/lenovo-legion-9i.jpg" .
  :Laptop_100_ROGStrixSCAR18 rdf:type owl:NamedIndividual, :Laptop, :HighEndLaptop, :GamingLaptop ;
     :namaModel "ASUS ROG Strix SCAR 18" ; :nomorModel "CAT-100" ; :tahunRilis 2023 ;
     :harga 62900000.0 ; :beratKg 2.10 ; :warna "Silver / Gray" ; :adalahTouchscreen "false"^^xsd:boolean ;
     :diproduksiOleh :asusBrand ; :memilikiProcessor :CPU_IntelCorei914900HX ; :memilikiRAM :RAM_32GB_DDR5 ; :memilikiStorage :SSD_2048GB ;
-    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_MiniLEDQHD ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home .
+    :memilikiGPU :GPU_GeForceRTX ; :memilikiDisplay :DISPLAY_MiniLEDQHD ; :memilikiOperatingSystem :OS_Windows11Home ; :memilikiPriceRange :range_HighEndLaptop ; :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/asus-rog-strix-scar-18.jpg" .
 
 # Lengkapi individu laptop contoh yang sudah ada pada ontologi asli.
 :AsusTUFGaming :namaModel "ASUS TUF Gaming (existing ontology individual)" ;
@@ -1674,7 +1680,7 @@
     :memilikiDisplay :DISPLAY_FHDIPS ;
     :memilikiOperatingSystem :OS_Windows11Home ;
     :memilikiPriceRange :range_GamingLaptop ;
-    :kompatibelDengan :OS_Windows11Home .
+    :kompatibelDengan :OS_Windows11Home ; :pathFoto "/images/asus-tuf-gaming.jpg" .
 
 
 #################################################################

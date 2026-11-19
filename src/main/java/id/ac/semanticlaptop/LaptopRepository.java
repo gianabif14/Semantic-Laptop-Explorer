@@ -103,7 +103,7 @@ public class LaptopRepository implements AutoCloseable {
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-            SELECT ?l ?model ?brandName ?cpu ?ram ?ramType ?capacity ?storageType ?price ?screen ?panel ?resolution ?gpu ?os ?category
+            SELECT ?l ?model ?brandName ?cpu ?ram ?ramType ?capacity ?storageType ?price ?screen ?panel ?resolution ?gpu ?os ?category ?pathFoto
                    (GROUP_CONCAT(DISTINCT STR(?syn); separator=", ") AS ?synonyms)
                    (GROUP_CONCAT(DISTINCT STR(?typeSyn); separator=", ") AS ?typeSynonyms)
                    (GROUP_CONCAT(DISTINCT STR(?rangeSyn); separator=", ") AS ?rangeSynonyms)
@@ -128,6 +128,7 @@ public class LaptopRepository implements AutoCloseable {
                 OPTIONAL { ?d :namaResolusi ?resolution }
                 ?g :namaGPU ?gpu .
                 ?o :namaOS ?os .
+                OPTIONAL { ?l :pathFoto ?pathFoto }
                 OPTIONAL { ?l :memilikiPriceRange ?pr . ?pr :namaRange ?category }
                 OPTIONAL { ?l rdf:type ?laptopType . ?laptopType :memilikiSinonim ?typeSyn }
                 OPTIONAL { ?l :memilikiPriceRange ?priceRangeNode . ?priceRangeNode :memilikiSinonim ?rangeSyn }
@@ -139,7 +140,7 @@ public class LaptopRepository implements AutoCloseable {
                 FILTER(?ram >= ?minRam && ?price >= ?minPrice && ?price <= ?maxPrice)
                 FILTER(?brandFilter = "" || LCASE(STR(?brandName)) = LCASE(?brandFilter))
             }
-            GROUP BY ?l ?model ?brandName ?cpu ?ram ?ramType ?capacity ?storageType ?price ?screen ?panel ?resolution ?gpu ?os ?category
+            GROUP BY ?l ?model ?brandName ?cpu ?ram ?ramType ?capacity ?storageType ?price ?screen ?panel ?resolution ?gpu ?os ?category ?pathFoto
             ORDER BY ?price ?model
             """;
 
@@ -184,6 +185,7 @@ public class LaptopRepository implements AutoCloseable {
                 String gpu = getString(s, "gpu");
                 String os = getString(s, "os");
                 String category = getString(s, "category");
+                String pathFoto = getString(s, "pathFoto");
                 String synonyms = (getString(s, "synonyms") + ", " + getString(s, "typeSynonyms") + ", " + getString(s, "rangeSynonyms")).trim();
 
                 // Kueri kategori gaming harus cocok dengan kelas kategori laptop,
@@ -210,7 +212,8 @@ public class LaptopRepository implements AutoCloseable {
                         gpu,
                         os,
                         category,
-                        synonyms
+                        synonyms,
+                        pathFoto
                 );
 
                 if (effectiveTokens.isEmpty()) {

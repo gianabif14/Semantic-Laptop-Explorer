@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const heroTitle = $("heroTitle");
     const heroDesc = $("heroDesc");
     const heroImage = $("heroImage");
-    const googleImageLink = $("googleImageLink");
     const detailPrice = $("detailPrice");
     const detailPanel = $("detailPanel");
     const tabContent = $("tabContent");
@@ -70,31 +69,16 @@ document.addEventListener("DOMContentLoaded", () => {
         return `${size} ${l.storageType}`.trim();
     }
 
-    // Foto produk resmi eksternal (CDN produsen); tidak disimpan di dalam ZIP.
-    // Model yang belum memiliki foto terverifikasi menampilkan placeholder spesifik + tautan Google Images.
-    const PRODUCT_IMAGES = [
-        { match: /chromebook cx1/i, url: "https://dlcdnwebimgs.asus.com/gain/64361e88-38ba-48d5-8367-502468cc5855/w800" },
-        { match: /vivobook go 14 e1404/i, url: "https://press.asus.com/assets/w_640%2Ch_640/1e0abc93-461e-41d2-bb05-4f9e04ace884/Vivobook%20Go%2014_E1404F_Thin%20and%20light.png" },
-        { match: /vivobook 14 x1404/i, url: "https://dlcdnwebimgs.asus.com/gain/8e05f618-e30b-4f59-8970-09d828d23b9d/w800" },
-        { match: /vivobook 15 x1504/i, url: "https://dlcdnwebimgs.asus.com/gain/d76a41bc-780e-41ef-938b-4ee8ac4a5634/w800" },
-        { match: /expertbook b1/i, url: "https://dlcdnwebimgs.asus.com/gain/695663ab-72d8-4bc0-9eaf-e971c33872d2/w692" }
-    ];
-
     function productImageUrl(l) {
-        const item = PRODUCT_IMAGES.find((entry) => entry.match.test(`${l.brand} ${l.model}`));
-        return item ? item.url : "";
-    }
-
-    function googleImageSearchUrl(l) {
-        return `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(`${l.brand} ${l.model} laptop official product photo`)}`;
+        if (!l || !l.pathFoto) return "";
+        return l.pathFoto.startsWith("/") ? l.pathFoto : `/${l.pathFoto}`;
     }
 
     function imagePlaceholder(l, className = "") {
         const box = el("div", `product-image-placeholder ${className}`);
         box.appendChild(el("div", "text-4xl mb-2", "▱"));
         box.appendChild(el("div", "text-sm font-bold text-slate-700", l.model));
-        box.appendChild(el("div", "text-xs text-slate-500 mt-1", "Foto resmi belum dipetakan"));
-        box.appendChild(el("div", "text-[11px] text-slate-500 mt-2", "Buka detail untuk tautan foto model"));
+        box.appendChild(el("div", "text-xs text-slate-500 mt-1", "Gambar produk"));
         return box;
     }
 
@@ -279,7 +263,6 @@ document.addEventListener("DOMContentLoaded", () => {
             heroImage.classList.add("hidden");
             heroImage.parentElement.appendChild(imagePlaceholder(l, "w-full min-h-48"));
         }
-        googleImageLink.href = googleImageSearchUrl(l);
         detailPrice.textContent = `Rp ${idr.format(l.priceIdr)}`;
 
         tabButtons.forEach((b) => {
