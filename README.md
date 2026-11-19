@@ -1,51 +1,46 @@
-# Semantic Laptop Explorer — Spring Boot Web + Apache Jena
+# Semantic Laptop — Sistem Rekomendasi & Pencarian Spesifikasi Laptop Berbasis Ontologi
 
-Aplikasi web modern berbasis **Spring Boot 3** dan **Apache Jena 5.5.0** untuk mengeksplorasi ontologi spesifikasi laptop (`src/main/resources/ontology/laptops.ttl` dalam format RDF Turtle). Proyek ini merupakan hasil migrasi dari antarmuka desktop Java Swing (`JTable`) ke arsitektur web lokal (`localhost`) dengan dukungan **alokasi port dinamis** (otomatis *fallback* dari port `8080` ke port kosong berikutnya jika terjadi konflik port).
+Aplikasi desktop dan web terintegrasi berbasis Java (Maven) dan Web Semantik untuk pencarian serta rekomendasi spesifikasi laptop menggunakan ontologi OWL/Turtle (`ontologi_laptop.ttl`) dan kueri SPARQL.
 
 ## Fitur Utama
-- **Mekanisme Port Dinamis (`DynamicPortConfig`)**: Memeriksa ketersediaan port mulai dari `8080`. Jika port `8080` sedang dipakai layanan lain, sistem otomatis beralih ke port kosong berikutnya (`8081`, `8082`, dst. hingga `8180`, atau *ephemeral port* OS) tanpa error `Address already in use`.
-- **Informasi Konsol & Auto-Open Browser**: Menampilkan banner status server beserta URL lengkap (`http://localhost:<port>`) di terminal dan otomatis membuka web browser ketika server siap.
-- **Pencarian & Filter SPARQL Utuh**: Mempertahankan seluruh filter dari aplikasi `JTable` sebelumnya (Brand, RAM Minimum, Harga Maksimum) menggunakan `ParameterizedSparqlString`, ditambah filter kata kunci (*live search*) dan pengurutan kolom (*column sorting*) secara interaktif di tabel HTML/JS.
 
-## Menjalankan Aplikasi
+* **Pencarian Semantik & Intent Detection:** Menganalisis maksud kueri pengguna (`QueryIntent`) dan memberikan skor relevansi pada setiap kandidat laptop (`ScoredLaptop`).
+* **Basis Pengetahuan Ontologi:** Menggunakan file ontologi Turtle (`ontologi_laptop.ttl`) yang kompatibel dengan Protégé.
+* **Antarmuka Hybrid (Desktop & Web):** Dilengkapi tampilan desktop Java Swing (`LaptopFrame`) sekaligus antarmuka web modern (`index.html`, `style.css`, `app.js`) yang disajikan melalui controller internal.
+* **Konfigurasi Port Dinamis:** Mendeteksi dan mengatur port server secara otomatis (`DynamicPortConfig`) untuk mencegah bentrok port saat dijalankan.
 
-### Prasyarat
-- JDK 17 atau lebih baru
-- Apache Maven 3.8+ (atau melalui bundel Maven pada Apache NetBeans / IDE)
+## Teknologi yang Digunakan
 
-### Eksekusi via Terminal
-```bash
-# 1. Kompilasi proyek
-mvn clean compile
+* **Backend & Desktop:** Java (Maven), Java Swing, Apache Jena (RDF/OWL & SPARQL Engine)
+* **Frontend (Embedded Web UI):** HTML5, CSS3, Vanilla JavaScript
+* **Ontology & Knowledge Base:** Turtle (`.ttl`), Protégé, SPARQL
 
-# 2. Jalankan server web Spring Boot
-mvn spring-boot:run
-# Atau menggunakan exec-maven-plugin (kompatibel dengan tombol Run di NetBeans):
-mvn exec:java
-```
+## Struktur Proyek
 
-### Konfigurasi Port Khusus (Opsional)
-Secara default aplikasi mencoba port `8080` terlebih dahulu. Anda juga dapat menentukan port awal secara manual:
-```bash
-mvn spring-boot:run -Dspring-boot.run.arguments="--app.server.preferred-port=9000"
-```
-
-## Struktur Endpoint REST API
-- `GET /` — Antarmuka Web Utama (Tabel & Filter Interaktif)
-- `GET /api/brands` — Daftar seluruh brand (`:Brand`) dari ontologi RDF
-- `GET /api/laptops?brand=&minRam=0&maxPrice=40000000&keyword=` — Eksekusi query SPARQL terparameterisasi dan mengembalikan data spesifikasi laptop dalam format JSON.
-
-
-## Pembaruan Antarmuka (Clean Cream & Blue)
-- Hasil pencarian ditampilkan dalam satu area berbentuk grid kartu.
-- Setiap kartu dapat ditekan untuk membuka detail laptop dalam modal.
-- Detail menyediakan tab Ringkasan, Spesifikasi, Sinonim & Relasi, serta Triple RDF.
-- Foto ilustrasi dimuat dari Unsplash melalui URL eksternal agar ukuran ZIP tetap ringan.
-- Tautan **Lihat foto produk di Google Images** membuka pencarian gambar berdasarkan merek dan model laptop. Gambar hasil Google tidak di-hotlink langsung karena URL thumbnail hasil pencarian tidak stabil dan dapat berubah.
-
-Jalankan seperti biasa melalui NetBeans (Run Project) atau:
-```bash
-mvn spring-boot:run
-```
-Buka URL localhost yang dicetak pada Output/terminal.
-
+```text
+semantic-laptop/
+├── docs/
+│   ├── PROTEGE-QUICKSTART.md          # Panduan cepat membuka ontologi di Protégé
+│   ├── SEMANTIC-SEARCH-IMPROVEMENTS.md# Catatan pengembangan algoritma pencarian
+│   └── SPARQL-queries.rq              # Kumpulan kueri SPARQL referensi
+├── src/
+│   └── main/
+│       ├── java/id/ac/semanticlaptop/
+│       │   ├── Main.java              # Entry point utama aplikasi
+│       │   ├── LaptopFrame.java       # Antarmuka GUI Desktop
+│       │   ├── LaptopController.java  # REST/Web Controller untuk UI Web
+│       │   ├── LaptopRepository.java  # Logika pemrosesan ontologi, SPARQL & scoring
+│       │   ├── Laptop.java            # Model entitas Laptop
+│       │   └── DynamicPortConfig.java # Konfigurasi port otomatis
+│       └── resources/
+│           ├── application.properties # Konfigurasi aplikasi
+│           ├── ontology/
+│           │   ├── ontologi_laptop.ttl# File basis pengetahuan ontologi laptop
+│           │   └── catalog-v001.xml   # Katalog URI ontologi Protégé
+│           └── static/
+│               ├── index.html         # Halaman utama antarmuka web
+│               ├── css/style.css      # Stylesheet antarmuka web
+│               └── js/app.js          # Logika interaktif frontend
+├── target/
+│   └── semantic-laptop-desktop-1.0.0.jar # Executable JAR hasil build
+└── pom.xml                            # Konfigurasi dependensi Maven
